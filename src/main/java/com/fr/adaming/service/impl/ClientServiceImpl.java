@@ -10,6 +10,11 @@ import com.fr.adaming.entity.Client;
 import com.fr.adaming.repository.ClientRepository;
 import com.fr.adaming.service.ClientService;
 
+/**
+ * 
+ * @author Brias Guillaume
+ *
+ */
 @Service
 public class ClientServiceImpl implements ClientService {
 
