@@ -3,7 +3,6 @@ package com.fr.adaming.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.fr.adaming.entity.Client;
@@ -30,9 +29,7 @@ public class ClientServiceImpl implements ClientService {
 	 */
 	@Override
 	public Client create(Client client) {
-		Client c = new Client();
-		c.setEmail(client.getEmail());
-		if (repo.exists(Example.of(c))) {
+		if (findByEmail(client.getEmail()) != null) {
 			return null;
 		} else {
 			return repo.save(client);
@@ -48,7 +45,7 @@ public class ClientServiceImpl implements ClientService {
 	 */
 	@Override
 	public Client update(Client client) {
-		if (repo.existsById(client.getId())) {
+		if (findByEmail(client.getEmail()) != null) {
 			return repo.save(client);
 		} else {
 			return null;
@@ -96,6 +93,11 @@ public class ClientServiceImpl implements ClientService {
 		} else {
 			return null;
 		}
+	}
+
+	@Override
+	public Client findByEmail(String email) {
+		return repo.findByEmail(email);
 	}
 
 }

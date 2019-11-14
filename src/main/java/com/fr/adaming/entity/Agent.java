@@ -22,6 +22,7 @@ public class Agent extends User {
 	@Column(nullable = false)
 	private String pwd;
 
+	@Column(name = "dateRecrutement")
 	private LocalDate dateRectrutement;
 
 	@OneToMany(mappedBy = "agent")
@@ -32,5 +33,13 @@ public class Agent extends User {
 		this.pwd = pwd;
 		this.dateRectrutement = dateRectrutement;
 	}
+
+	public Agent(Integer id, String email, String fullName, String telephone, String pwd, LocalDate dateRectrutement) {
+		super(id, email, fullName, telephone);
+		this.pwd = pwd;
+		this.dateRectrutement = dateRectrutement;
+	}
+	
+	
 
 }

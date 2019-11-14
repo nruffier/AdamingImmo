@@ -10,5 +10,5 @@ public interface AgentRepository extends JpaRepository<Agent, Integer> {
 
 	public Agent findByEmailAndPwd(String email, String pwd);
 
-	
+	public Agent findByEmail(String email);
 }

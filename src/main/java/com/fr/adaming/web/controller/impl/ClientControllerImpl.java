@@ -9,7 +9,8 @@ import com.fr.adaming.entity.Client;
 import com.fr.adaming.service.impl.ClientServiceImpl;
 import com.fr.adaming.web.controller.ClientController;
 import com.fr.adaming.web.dto.ClientDto;
-import com.fr.adaming.web.dto.converter.ClientDtoConverter;
+import com.fr.adaming.web.dto.ClientDtoUpdate;
+import com.fr.adaming.web.dto.converter.ClientConverter;
 
 @RestController
 public class ClientControllerImpl implements ClientController {
@@ -19,7 +20,7 @@ public class ClientControllerImpl implements ClientController {
 
 	@Override
 	public String create(ClientDto dto) {
-		if (service.create(ClientDtoConverter.convertClientDtoToClient(dto)) != null) {
+		if (service.create(ClientConverter.convertClientDtoToClient(dto)) != null) {
 			return "SUCCESS CREATE CLIENT";
 		} else {
 			return "FAIL CREATE CLIENT";
@@ -27,8 +28,8 @@ public class ClientControllerImpl implements ClientController {
 	}
 
 	@Override
-	public String update(ClientDto dto) {
-		if (service.update(ClientDtoConverter.convertClientDtoToClient(dto)) != null) {
+	public String update(ClientDtoUpdate dto) {
+		if (service.update(ClientConverter.convertClientDtoUpdateToClient(dto)) != null) {
 			return "SUCCESS UPDATE CLIENT";
 		} else {
 			return "FAIL UPDATE CLIENT";

@@ -8,4 +8,5 @@ import com.fr.adaming.entity.Client;
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Integer> {
 
+	public Client findByEmail(String email);
 }

@@ -17,4 +17,6 @@ public interface AgentService {
 	public Agent findById(Integer id);
 	
 	public Agent login(String email, String pwd);
+	
+	public Agent findByEmail(String email);
 }
