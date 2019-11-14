@@ -17,7 +17,7 @@ public abstract class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	@Email
 	@Column(nullable = false, unique = true)
 	private String email;
