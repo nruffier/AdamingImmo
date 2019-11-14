@@ -1,13 +1,13 @@
 package com.fr.adaming.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,11 +21,10 @@ public class Bien {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
 
-@NotNull
-@Positive
+@Column(nullable = false)
 private Double prix;
 
-@NotNull
+@Column(nullable = false)
 private boolean vendu;
 
 @ManyToOne
