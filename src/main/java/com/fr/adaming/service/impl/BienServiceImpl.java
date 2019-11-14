@@ -20,10 +20,11 @@ public class BienServiceImpl implements BienService {
 	@Autowired
 	private BienRepository repo;
 
-	/** Methode : Pour créer un nouveau bien
+	/**
+	 * Methode : Pour créer un nouveau bien
 	 *
-	 *@param 
-	 *@return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien
+	 * @param
+	 * @return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien
 	 */
 	@Override
 	public Bien create(Bien bien) {
@@ -35,10 +36,12 @@ public class BienServiceImpl implements BienService {
 		}
 	}
 
-	/** Methode : Pour faire une mise à jour du bien
+	/**
+	 * Methode : Pour faire une mise à jour du bien
 	 *
-	 *@param 
-	 *@return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien à modifier
+	 * @param
+	 * @return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien à
+	 *         modifier
 	 */
 	@Override
 	public Bien update(Bien bien) {
@@ -50,10 +53,11 @@ public class BienServiceImpl implements BienService {
 		}
 	}
 
-
-	/** Methode : Pour supprimer un bien
-	 *@param 
-	 *@return Retourne vrai si l'objet a été supprimé sinon il affiche faux
+	/**
+	 * Methode : Pour supprimer un bien
+	 * 
+	 * @param
+	 * @return Retourne vrai si l'objet a été supprimé sinon il affiche faux
 	 */
 	@Override
 	public boolean delete(Bien bien) {
@@ -66,31 +70,40 @@ public class BienServiceImpl implements BienService {
 		}
 	}
 
-	/**  Methode pour afficher un bien selon son id
-	 *@param
-	 *@return Retourne l'objet si il existe sinon il affiche null
+	/**
+	 * Methode pour afficher un bien selon son id
+	 * 
+	 * @param
+	 * @return Retourne l'objet si il existe sinon il affiche null
 	 */
 	@Override
 	public Bien findById(Long id) {
 		// TODO Auto-generated method stub
-		
+
 		try {
 			return repo.findById(id).get();
-			}
-		
-	    catch (NoSuchElementException e) {
-	    	return null;
-	    }
+		}
+
+		catch (NoSuchElementException e) {
+			return null;
+		}
 	}
 
-	/** Methode : Pour afficher tout les biens 
-	 *@param l'objet bien
-	 *@return Retourne la liste de biens
+	/**
+	 * Methode : Pour afficher tout les biens
+	 * 
+	 * @param l'objet bien
+	 * @return Retourne la liste de biens
 	 */
 	@Override
 	public List<Bien> getAll(Bien bien) {
 		// TODO Auto-generated method stub
 		return repo.findAll();
+	}
+
+	@Override
+	public void sellBien(Long id) {
+		repo.sellBien(id);
 	}
 
 }
