@@ -34,7 +34,4 @@ public abstract class User {
 		this.telephone = telephone;
 	}
 	
-	
-	
-	
 }
