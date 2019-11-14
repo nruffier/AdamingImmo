@@ -10,13 +10,11 @@ public interface AgentService {
 	
 	public Agent update(Agent agent);
 	
-	public Agent delete(Agent agent);
+	public boolean delete(Agent agent);
 	
-	public List<Agent> listAll();
+	public List<Agent> getAll();
 	
-	public Agent findByid(Integer id);
+	public Agent findById(Integer id);
 	
 	public Agent login(String email, String pwd);
-	
-	public boolean register(Agent agent);
 }
