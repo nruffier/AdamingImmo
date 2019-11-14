@@ -66,9 +66,9 @@ public class AgentServiceImpl implements AgentService {
 	 * 		   false if the given entity doesen't exist.
 	 */
 	@Override
-	public boolean delete(Agent agent) {
-		if (repo.exists(Example.of(agent))) {
-			repo.delete(agent);
+	public boolean delete(Integer id) {
+		if (repo.existsById(id)) {
+			repo.delete(repo.findById(id).get());
 			return true;
 		} else {
 			return false;

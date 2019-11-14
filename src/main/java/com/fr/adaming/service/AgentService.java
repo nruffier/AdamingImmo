@@ -10,7 +10,7 @@ public interface AgentService {
 	
 	public Agent update(Agent agent);
 	
-	public boolean delete(Agent agent);
+	public boolean delete(Integer id);
 	
 	public List<Agent> getAll();
 	
