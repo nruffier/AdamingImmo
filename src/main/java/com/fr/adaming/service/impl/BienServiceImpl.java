@@ -22,6 +22,8 @@ public class BienServiceImpl implements BienService {
 
 	/** Methode : Pour créer un nouveau bien
 	 *
+	 *@param 
+	 *@return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien
 	 */
 	@Override
 	public Bien create(Bien bien) {
@@ -35,21 +37,23 @@ public class BienServiceImpl implements BienService {
 
 	/** Methode : Pour faire une mise à jour du bien
 	 *
+	 *@param 
+	 *@return Retourne null si l'objet n'existe pas sinon il affiche l'objet bien à modifier
 	 */
 	@Override
-	public boolean update(Bien bien) {
+	public Bien update(Bien bien) {
 		// TODO Auto-generated method stub
 		if (repo.existsById(bien.getId())) {
-			repo.save(bien);
-			return true;
+			return repo.save(bien);
 		} else {
-			return false;
+			return null;
 		}
 	}
 
 
 	/** Methode : Pour supprimer un bien
-	 *
+	 *@param 
+	 *@return Retourne vrai si l'objet a été supprimé sinon il affiche faux
 	 */
 	@Override
 	public boolean delete(Bien bien) {
@@ -63,7 +67,8 @@ public class BienServiceImpl implements BienService {
 	}
 
 	/**  Methode pour afficher un bien selon son id
-	 *
+	 *@param
+	 *@return Retourne l'objet si il existe sinon il affiche null
 	 */
 	@Override
 	public Bien findById(Long id) {
@@ -79,7 +84,8 @@ public class BienServiceImpl implements BienService {
 	}
 
 	/** Methode : Pour afficher tout les biens 
-	 *
+	 *@param l'objet bien
+	 *@return Retourne la liste de biens
 	 */
 	@Override
 	public List<Bien> getAll(Bien bien) {
