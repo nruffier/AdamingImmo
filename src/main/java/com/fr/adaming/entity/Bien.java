@@ -50,10 +50,5 @@ public class Bien {
 		this.prix = prix;
 		this.vendu = vendu;
 	}
-	
-	
-
-	
-	//TODO
 
 }
