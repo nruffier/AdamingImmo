@@ -221,29 +221,27 @@ public class ClientServiceTest {
 		assertNull(returnedClient);
 	}
 	
-//	@Test
-//	@Sql(statements = { "truncate table client",
-//	"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-//	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-//	public void findByEmailWithValidEmail_shouldReturnClientNotNull() {
-//		Client returnedClient = service.getById(1);
-//		System.out.println("DEBUG TEST VALIDE getById() "+returnedClient);
-//		System.out.println("DEBUG TEST VALIDE getById() "+returnedClient.getEmail());
-//		assertNotNull(returnedClient);
-//		assertSame(returnedClient.getId(),1);
-//		assertEquals(returnedClient.getEmail(), "email@gmail.com");
-//		assertEquals(returnedClient.getFullName(), "fullName1");
-//		assertEquals(returnedClient.getTelephone(), "0123456789");
-//		assertEquals(returnedClient.getType(), Type.VENDEUR);
-//	}
-//	
-//	@Test
-//	public void getByIdNotExistingClient_shouldReturnNull() {
-//		Client returnedClient = service.getById(846354563);
-//
-//		assertNull(returnedClient);
-//	}
-//	
+	@Test
+	@Sql(statements = { "truncate table client",
+	"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void findByEmailWithValidEmail_shouldReturnClientNotNull() {
+		Client returnedClient = service.findByEmail("email@gmail.com");
+		assertNotNull(returnedClient);
+		assertSame(returnedClient.getId(),1);
+		assertEquals(returnedClient.getEmail(), "email@gmail.com");
+		assertEquals(returnedClient.getFullName(), "fullName1");
+		assertEquals(returnedClient.getTelephone(), "0123456789");
+		assertEquals(returnedClient.getType(), Type.VENDEUR);
+	}
+	
+	@Test
+	public void getByIdNotExistingClient_shouldReturnNull() {
+		Client returnedClient = service.getById(846354563);
+
+		assertNull(returnedClient);
+	}
+	
 	
 
 }
