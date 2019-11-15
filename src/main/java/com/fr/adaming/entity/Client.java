@@ -15,13 +15,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+/**
+ * @author Brias Guillaume
+ *
+ */
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client extends User {
-
+public class Client extends User { 
 	@Column(nullable = false)
 	private Type type;
 

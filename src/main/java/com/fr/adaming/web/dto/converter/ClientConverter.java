@@ -4,6 +4,10 @@ import com.fr.adaming.entity.Client;
 import com.fr.adaming.web.dto.ClientDto;
 import com.fr.adaming.web.dto.ClientDtoUpdate;
 
+/**
+ * @author Brias Gullaume
+ *
+ */
 public class ClientConverter {
 	
 	public static ClientDto convertClientToClientDto(Client client) {

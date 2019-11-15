@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.fr.adaming.entity.Client;
 
+/**
+ * @author Brias Guillaume
+ *
+ */
 public interface ClientService {
 	
 	public Client create(Client client);

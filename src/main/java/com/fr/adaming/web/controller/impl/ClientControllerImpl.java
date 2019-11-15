@@ -12,6 +12,10 @@ import com.fr.adaming.web.dto.ClientDto;
 import com.fr.adaming.web.dto.ClientDtoUpdate;
 import com.fr.adaming.web.dto.converter.ClientConverter;
 
+/**
+ * @author Brias Gullaume
+ *
+ */
 @RestController
 public class ClientControllerImpl implements ClientController {
 
