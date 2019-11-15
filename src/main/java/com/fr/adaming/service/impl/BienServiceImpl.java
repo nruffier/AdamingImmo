@@ -60,10 +60,10 @@ public class BienServiceImpl implements BienService {
 	 * @return Retourne vrai si l'objet a été supprimé sinon il affiche faux
 	 */
 	@Override
-	public boolean delete(Bien bien) {
+	public boolean delete(Long id) {
 		// TODO Auto-generated method stub
-		if (repo.existsById(bien.getId())) {
-			repo.delete(bien);
+		if (repo.existsById(id)) {
+			repo.deleteById(id);
 			return true;
 		} else {
 			return false;
@@ -77,7 +77,7 @@ public class BienServiceImpl implements BienService {
 	 * @return Retourne l'objet si il existe sinon il affiche null
 	 */
 	@Override
-	public Bien findById(Long id) {
+	public Bien getById(Long id) {
 		// TODO Auto-generated method stub
 
 		try {

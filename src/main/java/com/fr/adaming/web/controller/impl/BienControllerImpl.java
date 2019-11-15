@@ -1,11 +1,11 @@
-package com.fr.adaming.controller.impl;
+package com.fr.adaming.web.controller.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fr.adaming.controller.BienController;
+import com.fr.adaming.web.controller.BienController;
 import com.fr.adaming.entity.Bien;
 import com.fr.adaming.service.BienService;
 import com.fr.adaming.web.dto.BienDto;
@@ -30,23 +30,24 @@ public class BienControllerImpl implements BienController {
 	@Override
 	public String update(BienDto biendto) {
 		// TODO Auto-generated method stub
-		if (service.create(BienConverter.convert(biendto)) == null) {
-			return "Fail UPDATE";
+		if (service.update(BienConverter.convert(biendto)) != null) {
+			return "SUCCESS UPDATE";
 		} else {
-			return "Success UPDATE";
+			return "Fail UPDATE";
 		}
 	}
 
 	@Override
 	public void sellBien(Long id) {
+		service.sellBien(id);
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Bien findById(Long id) {
+	public Bien getById(Long id) {
 		// TODO Auto-generated method stub
-		return service.findById(id);
+		return service.getById(id);
 	}
 
 	@Override
@@ -55,10 +56,9 @@ public class BienControllerImpl implements BienController {
 		return service.getAll();
 	}
 
-	@Override
-	public String delete(BienDto biendto) {
+	public String delete(Long id) {
 		// TODO Auto-generated method stub
-		if (service.delete(BienConverter.convert(biendto))) {
+		if (service.delete(id)) {
 			return "SUCCESS DELETE";
 		} else {
 			return "FAIL DELETE";

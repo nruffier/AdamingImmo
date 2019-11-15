@@ -16,7 +16,7 @@ public interface BienRepository extends JpaRepository<Bien, Long> {
 	
 	@Transactional
 	@Modifying
-	@Query(value = "update bien set vendu = true where id like :xId", nativeQuery = true)
-	public void sellBien(@Param(value = "xId") Long id);	
+	@Query(value = "update bien set vendu = true where id = :id", nativeQuery = true)
+	public void sellBien(@Param(value = "id") Long id);	
 
 }

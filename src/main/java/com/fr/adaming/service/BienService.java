@@ -10,9 +10,9 @@ public interface BienService {
 
 	public Bien update(Bien bien);
 
-	public boolean delete(Bien bien);
+	public boolean delete(Long id);
 
-	public Bien findById(Long id);
+	public Bien getById(Long id);
 
 	public List<Bien> getAll();
 

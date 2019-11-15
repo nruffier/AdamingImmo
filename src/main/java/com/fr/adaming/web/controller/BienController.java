@@ -1,4 +1,4 @@
-package com.fr.adaming.controller;
+package com.fr.adaming.web.controller;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import com.fr.adaming.web.dto.BienDto;
 @RequestMapping(path = "api/bien")
 public interface BienController {
 	
-	@PostMapping(path="/save")
+	@PostMapping(path="/create")
 	public String create(@RequestBody BienDto biendto);
 	
 	@PutMapping(path="/update")
@@ -25,14 +25,14 @@ public interface BienController {
 	@PutMapping(path = "/{id}/sell-id/")
 	public void sellBien(@PathVariable(name = "id") Long id);
 
-	@GetMapping(path = "/{id}/find-id/")
-	public Bien findById(@PathVariable(name = "id") Long id);
+	@GetMapping(path = "/{id}/get-id/")
+	public Bien getById(@PathVariable(name = "id") Long id);
 
 	@GetMapping(path="/get-all")
 	public List<Bien> getAll();
 	
-	@DeleteMapping(path="/delete")
-	public String delete(BienDto biendto);
+	@DeleteMapping(path = "/{id}/delete/")
+	public String delete(@PathVariable(name = "id") Long id);
 
 
 	
