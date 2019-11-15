@@ -3,7 +3,10 @@ package com.fr.adaming.service;
 import java.util.List;
 
 import com.fr.adaming.entity.Bien;
-
+/**
+ * @author bilel
+ *
+ */
 public interface BienService {
 
 	public Bien create(Bien bien);
@@ -16,6 +19,6 @@ public interface BienService {
 
 	public List<Bien> getAll();
 
-	public void sellBien(Long id);
+	public boolean sellBien(Long id);
 
 }

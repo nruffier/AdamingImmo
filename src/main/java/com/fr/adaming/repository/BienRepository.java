@@ -10,6 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import com.fr.adaming.entity.Bien;
 
+/**
+ * @author bilel
+ *
+ */
 @Repository
 public interface BienRepository extends JpaRepository<Bien, Long> {
 	

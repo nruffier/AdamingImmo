@@ -12,12 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fr.adaming.entity.Bien;
 import com.fr.adaming.web.dto.BienDto;
+import com.fr.adaming.web.dto.BienDtoCreate;
 
+/**
+ * @author bilel
+ *
+ */
 @RequestMapping(path = "api/bien")
 public interface BienController {
 	
 	@PostMapping(path="/create")
-	public String create(@RequestBody BienDto biendto);
+	public String create(@RequestBody BienDtoCreate bienDtoCreate);
 	
 	@PutMapping(path="/update")
 	public String update(@RequestBody BienDto biendto);

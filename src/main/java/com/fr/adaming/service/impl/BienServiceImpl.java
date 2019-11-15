@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.fr.adaming.entity.Bien;
@@ -29,7 +30,7 @@ public class BienServiceImpl implements BienService {
 	@Override
 	public Bien create(Bien bien) {
 		// TODO Auto-generated method stub
-		if (repo.existsById(bien.getId())) {
+		if (repo.exists(Example.of(bien))) {
 			return null;
 		} else {
 			return repo.save(bien);
@@ -102,8 +103,13 @@ public class BienServiceImpl implements BienService {
 	}
 
 	@Override
-	public void sellBien(Long id) {
-		repo.sellBien(id);
+	public boolean sellBien(Long id) {
+		if (getById(id).isVendu() == false) {
+			repo.sellBien(id);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

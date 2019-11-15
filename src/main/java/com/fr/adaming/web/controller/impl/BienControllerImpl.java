@@ -9,8 +9,13 @@ import com.fr.adaming.web.controller.BienController;
 import com.fr.adaming.entity.Bien;
 import com.fr.adaming.service.BienService;
 import com.fr.adaming.web.dto.BienDto;
+import com.fr.adaming.web.dto.BienDtoCreate;
 import com.fr.adaming.web.dto.converter.BienConverter;
 
+/**
+ * @author bilel
+ *
+ */
 @RestController
 public class BienControllerImpl implements BienController {
 
@@ -18,9 +23,9 @@ public class BienControllerImpl implements BienController {
 	private BienService service;
 
 	@Override
-	public String create(BienDto biendto) {
+	public String create(BienDtoCreate bienDtoCreate) {
 		// TODO Auto-generated method stub
-		if (service.create(BienConverter.convert(biendto)) == null) {
+		if (service.create(BienConverter.convertBienDtoCreateToBien(bienDtoCreate)) == null) {
 			return "Fail SAVE";
 		} else {
 			return "Success SAVE";
@@ -30,7 +35,7 @@ public class BienControllerImpl implements BienController {
 	@Override
 	public String update(BienDto biendto) {
 		// TODO Auto-generated method stub
-		if (service.update(BienConverter.convert(biendto)) != null) {
+		if (service.update(BienConverter.convertBienDtoToBien(biendto)) != null) {
 			return "SUCCESS UPDATE";
 		} else {
 			return "Fail UPDATE";

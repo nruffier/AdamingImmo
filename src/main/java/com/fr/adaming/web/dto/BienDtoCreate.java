@@ -10,21 +10,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- * @author bilel
- *
- */
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
-public class BienDto {
-
-	@NotBlank
-	private Long id;
-
+public class BienDtoCreate {
 	@NotBlank
 	@Positive
 	private Double prix;
 
 	@NotNull
 	private boolean vendu;
-
 }
