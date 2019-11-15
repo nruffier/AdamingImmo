@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.fr.adaming.entity.Bien;
 import com.fr.adaming.repository.BienRepository;
+import com.fr.adaming.repository.ClientRepository;
 import com.fr.adaming.service.BienService;
 
 /**
@@ -20,6 +21,9 @@ public class BienServiceImpl implements BienService {
 
 	@Autowired
 	private BienRepository repo;
+	
+	@Autowired
+	private ClientRepository repoClient;
 
 	/**
 	 * Methode : Pour créer un nouveau bien
@@ -29,7 +33,6 @@ public class BienServiceImpl implements BienService {
 	 */
 	@Override
 	public Bien create(Bien bien) {
-		// TODO Auto-generated method stub
 		if (repo.exists(Example.of(bien))) {
 			return null;
 		} else {
@@ -46,7 +49,6 @@ public class BienServiceImpl implements BienService {
 	 */
 	@Override
 	public Bien update(Bien bien) {
-		// TODO Auto-generated method stub
 		if (repo.existsById(bien.getId())) {
 			return repo.save(bien);
 		} else {
@@ -62,7 +64,6 @@ public class BienServiceImpl implements BienService {
 	 */
 	@Override
 	public boolean delete(Long id) {
-		// TODO Auto-generated method stub
 		if (repo.existsById(id)) {
 			repo.deleteById(id);
 			return true;
@@ -79,7 +80,6 @@ public class BienServiceImpl implements BienService {
 	 */
 	@Override
 	public Bien getById(Long id) {
-		// TODO Auto-generated method stub
 
 		try {
 			return repo.findById(id).get();
@@ -98,7 +98,6 @@ public class BienServiceImpl implements BienService {
 	 */
 	@Override
 	public List<Bien> getAll() {
-		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
 
@@ -106,6 +105,16 @@ public class BienServiceImpl implements BienService {
 	public boolean sellBien(Long id) {
 		if (getById(id).isVendu() == false) {
 			repo.sellBien(id);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean addClient(Long idBien, Integer idClient) {
+		if (repo.existsById(idBien) && repoClient.existsById(idClient)) {
+			repo.addClient(idBien, idClient);
 			return true;
 		} else {
 			return false;

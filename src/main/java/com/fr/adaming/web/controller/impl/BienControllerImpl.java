@@ -65,4 +65,13 @@ public class BienControllerImpl implements BienController {
 		}
 	}
 
+	@Override
+	public String addClient(Long idBien, Integer idClient) {
+		if (service.addClient(idBien, idClient)) {
+			return "SUCCESS addClient";
+		} else {
+			return "FAIL addClient";
+		}
+	}
+
 }

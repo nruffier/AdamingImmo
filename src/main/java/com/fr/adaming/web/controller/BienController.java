@@ -38,5 +38,8 @@ public interface BienController {
 
 	@DeleteMapping(path = "/{id}/delete/")
 	public String delete(@PathVariable(name = "id") Long id);
+	
+	@GetMapping(path = "/{idBien}/add-client/{idClient}")
+	public String addClient(@PathVariable(name = "idBien") Long idBien, @PathVariable(name = "idClient") Integer idClient);
 
 }
