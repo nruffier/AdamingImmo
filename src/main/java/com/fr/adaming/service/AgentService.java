@@ -14,7 +14,7 @@ public interface AgentService {
 	
 	public List<Agent> getAll();
 	
-	public Agent findById(Integer id);
+	public Agent getById(Integer id);
 	
 	public Agent login(String email, String pwd);
 	

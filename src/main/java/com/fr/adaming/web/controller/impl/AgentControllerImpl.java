@@ -54,7 +54,7 @@ public class AgentControllerImpl implements AgentController{
 
 	@Override
 	public Agent findById(Integer id) {
-		return service.findById(id);
+		return service.getById(id);
 	}
 
 	@Override
