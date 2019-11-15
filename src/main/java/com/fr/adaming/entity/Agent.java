@@ -28,6 +28,7 @@ public class Agent extends User {
 	@OneToMany(mappedBy = "agent")
 	private List<Client> clients;
 
+	
 	public Agent(String email, String fullName, String telephone, String pwd, LocalDate dateRectrutement) {
 		super(email, fullName, telephone);
 		this.pwd = pwd;
@@ -38,6 +39,11 @@ public class Agent extends User {
 		super(id, email, fullName, telephone);
 		this.pwd = pwd;
 		this.dateRectrutement = dateRectrutement;
+	}
+
+	public Agent(String email, String fullName, String telephone, String pwd) {
+		super(email, fullName, telephone);
+		this.pwd = pwd;
 	}
 	
 	
