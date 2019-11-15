@@ -14,6 +14,10 @@ import com.fr.adaming.entity.Client;
 import com.fr.adaming.web.dto.ClientDto;
 import com.fr.adaming.web.dto.ClientDtoUpdate;
 
+/**
+ * @author Brias Guillaume
+ *
+ */
 @RequestMapping(path = "api/client")
 public interface ClientController {
 

@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import com.fr.adaming.entity.Client;
 
+/**
+ * @author Brias Guillaume
+ *
+ */
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Integer> {
 

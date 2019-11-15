@@ -13,6 +13,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Brias Gullaume
+ *
+ */
 @Getter
 @Setter
 @NoArgsConstructor
