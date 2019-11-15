@@ -40,8 +40,8 @@ public class BienServiceTest {
 		assertNotNull(returnedBien.getPrix());
 		assertEquals(returnedBien.getPrix(), 100000d);
 		assertSame(returnedBien.isVendu(), false);
-	}	
-	
+	}
+
 	@Test
 	@Sql(statements = { "truncate table bien",
 			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
@@ -53,22 +53,24 @@ public class BienServiceTest {
 
 		assertNull(returnedBien);
 	}
-	
+
 	@Test
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createBienWithPrixNull_shouldThrowDataIntegrityViolationException() {
 		Bien c = new Bien(1L, 100000d, false);
-		
 
 		Exception exception = assertThrows(DataIntegrityViolationException.class, () -> {
 			c.setPrix(null);
 			service.create(c);
 		});
-		assertEquals("could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement", exception.getMessage());
+		assertEquals(
+				"could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement",
+				exception.getMessage());
 	}
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateValidBien_shouldReturnBienWithIdNotNull() {
 		Bien c = new Bien(1L, 100001d, false);
@@ -80,10 +82,10 @@ public class BienServiceTest {
 		assertEquals(returnedBien.getPrix(), 100001d);
 		assertSame(returnedBien.isVendu(), false);
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateInvalidBien_shouldReturnBienNull() {
 		Bien c = new Bien(2L, 100001d, false);
@@ -91,23 +93,25 @@ public class BienServiceTest {
 
 		assertNull(returnedBien);
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateBienWithPrixNull_shouldReturnFBUIPFYVIP() {
 		Bien c = new Bien(1L, 100001d, false);
 		c.setPrix(null);
 		Exception exception = assertThrows(DataIntegrityViolationException.class, () -> {
-		service.update(c);
+			service.update(c);
 		});
-		assertEquals("could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement", exception.getMessage());
+		assertEquals(
+				"could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement",
+				exception.getMessage());
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void deleteBienWithValidId_shouldReturnTrue() {
 		boolean returnedresult = service.delete(1L);
 
@@ -120,47 +124,47 @@ public class BienServiceTest {
 
 		assertFalse(returnedresult);
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void getByIdWithValidId_shouldReturnBienNotNull() {
 		Bien returnedBien = service.getById(1L);
-		
+
 		assertNotNull(returnedBien);
 		assertNotNull(returnedBien.getId());
 		assertNotNull(returnedBien.getPrix());
 		assertEquals(returnedBien.getPrix(), 100000d);
 		assertSame(returnedBien.isVendu(), false);
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void getByIdNotExistingBien_shouldReturnNull() {
 		Bien returnedBien = service.getById(1546546461L);
-		
+
 		assertNull(returnedBien);
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 0)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void sellBienIfExist_shouldReturnTrue() {
 		assertTrue(service.sellBien(1L));
 	}
-	
+
 	@Test
 	@Sql(statements = { "truncate table bien",
-	"insert into bien (id, prix, vendu) values(1, 100000, 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+			"insert into bien (id, prix, vendu) values(1, 100000, 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "truncate table bien", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void sellBienIfAlredySold_shouldReturnTrue() {
 		assertFalse(service.sellBien(1L));
 	}
-	
+
 	public void sellBienIfNotExist_shouldReturnTrue() {
 		assertFalse(service.sellBien(1L));
 	}

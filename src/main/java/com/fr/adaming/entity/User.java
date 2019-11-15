@@ -19,7 +19,10 @@ import lombok.Setter;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class User {
 
 	@Id
@@ -30,12 +33,12 @@ public abstract class User {
 	@Column(nullable = false, name = "fullName")
 	private String fullName;
 	private String telephone;
-	
+
 	public User(String email, String fullName, String telephone) {
 		super();
 		this.email = email;
 		this.fullName = fullName;
 		this.telephone = telephone;
 	}
-	
+
 }

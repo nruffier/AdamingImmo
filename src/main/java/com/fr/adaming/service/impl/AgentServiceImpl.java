@@ -17,18 +17,15 @@ import com.fr.adaming.service.AgentService;
 @Service
 public class AgentServiceImpl implements AgentService {
 
-	
-	
 	@Autowired
 	private AgentRepository repo;
 
-	
 	/**
-	 *Save a givent agent in the database
+	 * Save a givent agent in the database
 	 *
-	 *@param agent - the givent entity
-	 *@return updated agent if the given entity is not already in the database 
-	 *		  Null if the given entity exist.
+	 * @param agent - the givent entity
+	 * @return updated agent if the given entity is not already in the database Null
+	 *         if the given entity exist.
 	 *
 	 */
 	@Override
@@ -40,13 +37,12 @@ public class AgentServiceImpl implements AgentService {
 		}
 	}
 
-	
 	/**
 	 * Modify the given entity by Id
 	 * 
 	 * @param agent - the given entity (must have an id)
-	 * @return the update entity is the given entity is in the database and the update is done -
-	 *         null if the given entity is not present in the DB
+	 * @return the update entity is the given entity is in the database and the
+	 *         update is done - null if the given entity is not present in the DB
 	 */
 	@Override
 	public Agent update(Agent agent) {
@@ -61,8 +57,8 @@ public class AgentServiceImpl implements AgentService {
 	 * Delete the given entity from the database
 	 * 
 	 * @param agent - the given entity
-	 * @return true if the given entity exist in the DB -
-	 * 		   false if the given entity doesen't exist.
+	 * @return true if the given entity exist in the DB - false if the given entity
+	 *         doesen't exist.
 	 */
 	@Override
 	public boolean delete(Integer id) {
@@ -73,13 +69,12 @@ public class AgentServiceImpl implements AgentService {
 			return false;
 		}
 	}
-	
-	
+
 	/**
 	 * Find an Agent with a given Id
 	 *
-	 *@param Integer id - the given id
-	 *@return Agent with the given id if present in the DB - null if not
+	 * @param Integer id - the given id
+	 * @return Agent with the given id if present in the DB - null if not
 	 */
 	@Override
 	public Agent getById(Integer id) {
@@ -89,6 +84,7 @@ public class AgentServiceImpl implements AgentService {
 			return null;
 		}
 	}
+
 	/**
 	 * List all the Agent in the database
 	 * 
@@ -99,8 +95,6 @@ public class AgentServiceImpl implements AgentService {
 		return repo.findAll();
 	}
 
-
-	
 	/**
 	 * Check the database for a combinaison of email and password
 	 * 
@@ -112,7 +106,7 @@ public class AgentServiceImpl implements AgentService {
 	public Agent login(String email, String pwd) {
 		return repo.findByEmailAndPwd(email, pwd);
 	}
-	
+
 	@Override
 	public Agent findByEmail(String email) {
 		return repo.findByEmail(email);

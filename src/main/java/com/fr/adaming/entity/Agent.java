@@ -32,7 +32,6 @@ public class Agent extends User {
 	@OneToMany(mappedBy = "agent")
 	private List<Client> clients;
 
-	
 	public Agent(String email, String fullName, String telephone, String pwd, LocalDate dateRectrutement) {
 		super(email, fullName, telephone);
 		this.pwd = pwd;
@@ -52,12 +51,8 @@ public class Agent extends User {
 
 	@Override
 	public String toString() {
-		return "Agent [pwd=" + pwd + ", dateRectrutement=" + dateRectrutement + ", getId()="
-				+ getId() + ", getEmail()=" + getEmail() + ", getFullName()=" + getFullName() + ", getTelephone()="
-				+ getTelephone() + "]";
+		return "Agent [pwd=" + pwd + ", dateRectrutement=" + dateRectrutement + ", getId()=" + getId() + ", getEmail()="
+				+ getEmail() + ", getFullName()=" + getFullName() + ", getTelephone()=" + getTelephone() + "]";
 	}
-	
-	
-	
 
 }

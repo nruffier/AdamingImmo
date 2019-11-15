@@ -19,12 +19,11 @@ import com.fr.adaming.web.dto.converter.BienConverter;
 @RestController
 public class BienControllerImpl implements BienController {
 
-	@Autowired 
+	@Autowired
 	private BienService service;
 
 	@Override
 	public String create(BienDtoCreate bienDtoCreate) {
-		// TODO Auto-generated method stub
 		if (service.create(BienConverter.convertBienDtoCreateToBien(bienDtoCreate)) == null) {
 			return "Fail SAVE";
 		} else {
@@ -34,7 +33,6 @@ public class BienControllerImpl implements BienController {
 
 	@Override
 	public String update(BienDto biendto) {
-		// TODO Auto-generated method stub
 		if (service.update(BienConverter.convertBienDtoToBien(biendto)) != null) {
 			return "SUCCESS UPDATE";
 		} else {
@@ -45,24 +43,21 @@ public class BienControllerImpl implements BienController {
 	@Override
 	public void sellBien(Long id) {
 		service.sellBien(id);
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public Bien getById(Long id) {
-		// TODO Auto-generated method stub
 		return service.getById(id);
 	}
 
 	@Override
 	public List<Bien> getAll() {
-		// TODO Auto-generated method stub
 		return service.getAll();
 	}
 
+	@Override
 	public String delete(Long id) {
-		// TODO Auto-generated method stub
 		if (service.delete(id)) {
 			return "SUCCESS DELETE";
 		} else {

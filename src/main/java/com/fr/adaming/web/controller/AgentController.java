@@ -13,23 +13,29 @@ import com.fr.adaming.entity.Agent;
 import com.fr.adaming.web.dto.AgentDtoLogin;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
+
 /**
  * @author Nicolas RUFFIER
  *
  */
-@RequestMapping(path= "api/agent")
+@RequestMapping(path = "api/agent")
 public interface AgentController {
-	@PostMapping(path="/create")
+	@PostMapping(path = "/create")
 	public String create(@RequestBody AgentDtoRegister agentDto);
-	@PostMapping(path="/update")
+
+	@PostMapping(path = "/update")
 	public String update(@RequestBody AgentDtoUpdate agentDto);
-	@DeleteMapping(path="/{id}/delete")
+
+	@DeleteMapping(path = "/{id}/delete")
 	public String delete(@PathVariable(name = "id") Integer id);
+
 	@GetMapping(path = "/get-all")
 	public List<Agent> getAll();
+
 	@GetMapping(path = "/{id}/get-id")
 	public Agent findById(@PathVariable(name = "id") Integer id);
+
 	@PostMapping(path = "/login")
 	public String login(@RequestBody AgentDtoLogin agentDtoLogin);
-	
+
 }

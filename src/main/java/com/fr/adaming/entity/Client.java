@@ -15,7 +15,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 /**
  * @author Brias Guillaume
  *
@@ -25,7 +24,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client extends User { 
+public class Client extends User {
 	@Column(nullable = false)
 	private Type type;
 
@@ -40,18 +39,15 @@ public class Client extends User {
 		super(email, fullName, telephone);
 		this.type = type;
 	}
-	
+
 	public Client(Integer id, String email, String fullName, String telephone, Type type) {
 		super(id, email, fullName, telephone);
 		this.type = type;
 	}
-	
-	
 
 	@Override
 	public String toString() {
 		return "Client [type=" + type + ", agent=" + agent + ", toString()=" + super.toString() + "]";
 	}
-
 
 }

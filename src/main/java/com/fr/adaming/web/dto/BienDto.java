@@ -14,7 +14,11 @@ import lombok.ToString;
  * @author bilel
  *
  */
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class BienDto {
 
 	@NotBlank

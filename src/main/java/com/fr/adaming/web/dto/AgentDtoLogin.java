@@ -13,7 +13,10 @@ import lombok.Setter;
  * @author Nicolas RUFFIER
  *
  */
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class AgentDtoLogin {
 
 	@NotBlank

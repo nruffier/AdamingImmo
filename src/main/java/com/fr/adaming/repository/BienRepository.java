@@ -16,11 +16,10 @@ import com.fr.adaming.entity.Bien;
  */
 @Repository
 public interface BienRepository extends JpaRepository<Bien, Long> {
-	
-	
+
 	@Transactional
 	@Modifying
 	@Query(value = "update bien set vendu = true where id = :id", nativeQuery = true)
-	public void sellBien(@Param(value = "id") Long id);	
+	public void sellBien(@Param(value = "id") Long id);
 
 }

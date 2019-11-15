@@ -10,7 +10,7 @@ import com.fr.adaming.web.dto.AgentDtoUpdate;
  */
 public class AgentConverter {
 
-	public static Agent AgentDtoRegisterToAgent(AgentDtoRegister agentDtoRegister) {
+	public static Agent agentDtoRegisterToAgent(AgentDtoRegister agentDtoRegister) {
 		return new Agent(agentDtoRegister.getEmail(),
 				agentDtoRegister.getFullName(),
 				agentDtoRegister.getTelephone(),
@@ -19,7 +19,7 @@ public class AgentConverter {
 				);
 	}
 
-	public static AgentDtoRegister AgentToAgentDtoRegister(Agent agent) {
+	public static AgentDtoRegister agentToAgentDtoRegister(Agent agent) {
 		return new AgentDtoRegister(agent.getEmail(),
 				agent.getFullName(),
 				agent.getTelephone(),
@@ -27,7 +27,7 @@ public class AgentConverter {
 				agent.getDateRectrutement());
 	}
 
-	public static Agent AgentDtoUpdateToAgent(AgentDtoUpdate agentDtoUpdate) {
+	public static Agent agentDtoUpdateToAgent(AgentDtoUpdate agentDtoUpdate) {
 		return new Agent(
 				agentDtoUpdate.getId(),
 				agentDtoUpdate.getEmail(),
@@ -38,7 +38,7 @@ public class AgentConverter {
 				);
 	}
 	
-	public static AgentDtoUpdate AgentToAgentDtoUpdate(Agent agent) {
+	public static AgentDtoUpdate agentToAgentDtoUpdate(Agent agent) {
 		return new AgentDtoUpdate(
 				agent.getId(),
 				agent.getEmail(),

@@ -3,11 +3,10 @@ package com.fr.adaming.web.dto;
 import java.time.LocalDate;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,10 +27,9 @@ public class AgentDtoRegister {
 	@NotBlank
 	private String fullName;
 	@NotBlank
-	@Pattern(regexp = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d")
+	@Pattern(regexp = "[0-9]{10}")
 	private String telephone;
-	@Max(value = 16)
-	@Min(value = 8)
+	@Size(min = 8, max = 16)
 	@NotBlank
 	private String pwd;
 	@PastOrPresent

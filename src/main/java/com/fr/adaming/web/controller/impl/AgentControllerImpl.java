@@ -18,13 +18,13 @@ import com.fr.adaming.web.dto.converter.AgentConverter;
  *
  */
 @RestController
-public class AgentControllerImpl implements AgentController{
+public class AgentControllerImpl implements AgentController {
 	@Autowired
 	private AgentService service;
 
 	@Override
 	public String create(AgentDtoRegister agentDto) {
-		Agent agent = AgentConverter.AgentDtoRegisterToAgent(agentDto);
+		Agent agent = AgentConverter.agentDtoRegisterToAgent(agentDto);
 		if (service.create(agent) != null) {
 			return "create SUCCES";
 		} else {
@@ -34,7 +34,7 @@ public class AgentControllerImpl implements AgentController{
 
 	@Override
 	public String update(AgentDtoUpdate agentDto) {
-		Agent agent = AgentConverter.AgentDtoUpdateToAgent(agentDto);
+		Agent agent = AgentConverter.agentDtoUpdateToAgent(agentDto);
 		if (service.update(agent) != null) {
 			return "Update SUCCES";
 		} else {
@@ -69,6 +69,5 @@ public class AgentControllerImpl implements AgentController{
 			return "Login FAIL";
 		}
 	}
-	
-	
+
 }

@@ -20,27 +20,23 @@ import com.fr.adaming.web.dto.BienDtoCreate;
  */
 @RequestMapping(path = "api/bien")
 public interface BienController {
-	
-	@PostMapping(path="/create")
+
+	@PostMapping(path = "/create")
 	public String create(@RequestBody BienDtoCreate bienDtoCreate);
-	
-	@PutMapping(path="/update")
+
+	@PutMapping(path = "/update")
 	public String update(@RequestBody BienDto biendto);
-	
+
 	@PutMapping(path = "/{id}/sell-id/")
 	public void sellBien(@PathVariable(name = "id") Long id);
 
 	@GetMapping(path = "/{id}/get-id/")
 	public Bien getById(@PathVariable(name = "id") Long id);
 
-	@GetMapping(path="/get-all")
+	@GetMapping(path = "/get-all")
 	public List<Bien> getAll();
-	
+
 	@DeleteMapping(path = "/{id}/delete/")
 	public String delete(@PathVariable(name = "id") Long id);
-
-
-	
-	
 
 }

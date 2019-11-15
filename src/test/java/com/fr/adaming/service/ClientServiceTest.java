@@ -19,7 +19,6 @@ import com.fr.adaming.entity.Client;
 import com.fr.adaming.enumeration.Type;
 import com.fr.adaming.service.impl.ClientServiceImpl;
 
-
 /**
  * @author Guillaume BRIAS
  *

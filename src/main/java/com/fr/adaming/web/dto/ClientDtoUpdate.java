@@ -25,8 +25,8 @@ import lombok.ToString;
 public class ClientDtoUpdate {
 
 	@NotNull
-	private Integer Id;
-	
+	private Integer id;
+
 	@Email
 	@NotBlank
 	private String email;
@@ -40,5 +40,5 @@ public class ClientDtoUpdate {
 
 	@NotNull
 	private Type type;
-	
+
 }
