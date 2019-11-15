@@ -82,7 +82,7 @@ public class AgentServiceImpl implements AgentService {
 	 *@return Agent with the given id if present in the DB - null if not
 	 */
 	@Override
-	public Agent findById(Integer id) {
+	public Agent getById(Integer id) {
 		try {
 			return repo.findById(id).get();
 		} catch (NoSuchElementException e) {

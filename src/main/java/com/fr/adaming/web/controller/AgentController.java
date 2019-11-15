@@ -13,7 +13,10 @@ import com.fr.adaming.entity.Agent;
 import com.fr.adaming.web.dto.AgentDtoLogin;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
-
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @RequestMapping(path= "api/agent")
 public interface AgentController {
 	@PostMapping(path="/create")

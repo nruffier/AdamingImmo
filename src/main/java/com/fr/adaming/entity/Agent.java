@@ -12,6 +12,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @Entity
 @Getter
 @Setter
@@ -45,6 +49,14 @@ public class Agent extends User {
 		super(email, fullName, telephone);
 		this.pwd = pwd;
 	}
+
+	@Override
+	public String toString() {
+		return "Agent [pwd=" + pwd + ", dateRectrutement=" + dateRectrutement + ", getId()="
+				+ getId() + ", getEmail()=" + getEmail() + ", getFullName()=" + getFullName() + ", getTelephone()="
+				+ getTelephone() + "]";
+	}
+	
 	
 	
 
