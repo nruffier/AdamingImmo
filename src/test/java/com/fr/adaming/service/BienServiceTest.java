@@ -165,7 +165,23 @@ public class BienServiceTest {
 		assertFalse(service.sellBien(1L));
 	}
 
+	@Test
 	public void sellBienIfNotExist_shouldReturnTrue() {
-		assertFalse(service.sellBien(1L));
+
+		assertThrows(NullPointerException.class, () -> {
+			service.sellBien(1L);
+		});
+
+	}
+
+	@Test
+	@Sql(statements = { "truncate table client",
+			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)",
+			"truncate table bien",
+			"insert into bien (id, prix, vendu) values(1, 100000, 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = { "truncate table bien",
+			"truncate table client" }, executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void addValidClientToValidBien_shouldReturnTrue() {
+		assertTrue(service.addClient(1l, 1));
 	}
 }

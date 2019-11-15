@@ -21,5 +21,7 @@ public interface BienService {
 	public List<Bien> getAll();
 
 	public boolean sellBien(Long id);
+	
+	public boolean addClient(Long idBien, Integer idClient );
 
 }
