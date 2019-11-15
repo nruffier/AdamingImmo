@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fr.adaming.entity.Client;
+import com.fr.adaming.repository.AgentRepository;
 import com.fr.adaming.repository.ClientRepository;
 import com.fr.adaming.service.ClientService;
 
@@ -19,6 +20,9 @@ public class ClientServiceImpl implements ClientService {
 
 	@Autowired
 	private ClientRepository repo;
+	
+	@Autowired
+	private AgentRepository repoA;
 
 	/**
 	 * Save a given Client in the database
@@ -98,6 +102,16 @@ public class ClientServiceImpl implements ClientService {
 	@Override
 	public Client findByEmail(String email) {
 		return repo.findByEmail(email);
+	}
+	
+	@Override
+	public boolean addAgent(Integer idC, Integer idA) {
+		if (repo.existsById(idC) && repoA.existsById(idA)) {
+		repo.addAgent(idC, idA);
+		return true;
+		} else {
+			return false;
+		}
 	}
 
 }

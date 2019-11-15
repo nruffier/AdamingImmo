@@ -58,5 +58,14 @@ public class ClientControllerImpl implements ClientController {
 	public Client getById(Integer id) {
 		return service.getById(id);
 	}
+	
+	@Override
+	public String addAgent(Integer idC, Integer idA) {
+		if (service.addAgent(idC, idA)) {
+			return "addAgent SUCCES";
+		} else {
+			return "addAgent FAIL";
+		}
+	}
 
 }

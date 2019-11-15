@@ -2,6 +2,8 @@ package com.fr.adaming.web.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,10 +24,10 @@ import com.fr.adaming.web.dto.ClientDtoUpdate;
 public interface ClientController {
 
 	@PostMapping(path = "/create")
-	public String create(@RequestBody ClientDto dto);
+	public String create(@Valid @RequestBody ClientDto dto);
 
 	@PutMapping(path = "/update")
-	public String update(@RequestBody ClientDtoUpdate dto);
+	public String update(@Valid @RequestBody ClientDtoUpdate dto);
 
 	@DeleteMapping(path = "/{id}/delete")
 	public String delete(@PathVariable(name = "id") Integer id);
@@ -35,5 +37,8 @@ public interface ClientController {
 
 	@GetMapping(path = "/{id}/get-id")
 	public Client getById(@PathVariable(name = "id") Integer id);
+	
+	@GetMapping(path = "/{idC}/add-agent/{idA}")
+	String addAgent(@PathVariable(name = "idC") Integer idC, @PathVariable(name = "idA") Integer IdA);
 
 }

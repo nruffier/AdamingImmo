@@ -293,4 +293,13 @@ public class ClientServiceTest {
 		assertNull(returnedClient);
 	}
 
+	@Test
+	@Sql(statements = { "truncate table client", "truncate table agent",
+			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)",
+			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = {"truncate table client", "truncate table agent"}, executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void addValidAgentToValidClient_shouldReturnTrue() {
+		assertTrue(service.addAgent(1, 1));
+	}
+
 }

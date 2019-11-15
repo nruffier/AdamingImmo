@@ -35,7 +35,7 @@ public class ClientDtoUpdate {
 	private String fullName;
 
 	@NotBlank
-	@Pattern(regexp = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d")
+	@Pattern(regexp = "[0-9]{10}")
 	private String telephone;
 
 	@NotNull

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author Nicolas RUFFIER
+ * @author Guillaume BRIAS
  *
  */
 @Entity

@@ -22,4 +22,6 @@ public interface ClientService {
 
 	public Client findByEmail(String email);
 
+	public boolean addAgent(Integer idC, Integer idA);
+
 }

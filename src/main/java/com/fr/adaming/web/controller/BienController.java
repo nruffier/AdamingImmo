@@ -2,6 +2,8 @@ package com.fr.adaming.web.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,10 +24,10 @@ import com.fr.adaming.web.dto.BienDtoCreate;
 public interface BienController {
 
 	@PostMapping(path = "/create")
-	public String create(@RequestBody BienDtoCreate bienDtoCreate);
+	public String create(@Valid @RequestBody BienDtoCreate bienDtoCreate);
 
 	@PutMapping(path = "/update")
-	public String update(@RequestBody BienDto biendto);
+	public String update(@Valid @RequestBody BienDto biendto);
 
 	@PutMapping(path = "/{id}/sell-id/")
 	public void sellBien(@PathVariable(name = "id") Long id);
