@@ -10,8 +10,13 @@ import com.fr.adaming.service.AgentService;
 import com.fr.adaming.web.controller.AgentController;
 import com.fr.adaming.web.dto.AgentDtoLogin;
 import com.fr.adaming.web.dto.AgentDtoRegister;
+import com.fr.adaming.web.dto.AgentDtoUpdate;
 import com.fr.adaming.web.dto.converter.AgentConverter;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @RestController
 public class AgentControllerImpl implements AgentController{
 	@Autowired
@@ -28,8 +33,8 @@ public class AgentControllerImpl implements AgentController{
 	}
 
 	@Override
-	public String update(AgentDtoRegister agentDto) {
-		Agent agent = AgentConverter.AgentDtoRegisterToAgent(agentDto);
+	public String update(AgentDtoUpdate agentDto) {
+		Agent agent = AgentConverter.AgentDtoUpdateToAgent(agentDto);
 		if (service.update(agent) != null) {
 			return "Update SUCCES";
 		} else {
@@ -53,7 +58,7 @@ public class AgentControllerImpl implements AgentController{
 
 	@Override
 	public Agent findById(Integer id) {
-		return service.findById(id);
+		return service.getById(id);
 	}
 
 	@Override

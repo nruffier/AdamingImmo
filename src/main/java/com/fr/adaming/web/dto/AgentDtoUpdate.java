@@ -6,6 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
@@ -20,8 +21,10 @@ import lombok.ToString;
  *
  */
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
-public class AgentDtoRegister {
+public class AgentDtoUpdate {
 	
+	@NotNull
+	private Integer Id;
 	@NotBlank
 	@Email
 	private String email;
@@ -36,4 +39,5 @@ public class AgentDtoRegister {
 	private String pwd;
 	@PastOrPresent
 	private LocalDate dateRectrutement;
+
 }

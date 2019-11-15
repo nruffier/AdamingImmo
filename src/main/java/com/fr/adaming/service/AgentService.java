@@ -3,7 +3,10 @@ package com.fr.adaming.service;
 import java.util.List;
 
 import com.fr.adaming.entity.Agent;
-
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 public interface AgentService {
 
 	public Agent create(Agent agent);
@@ -14,7 +17,9 @@ public interface AgentService {
 	
 	public List<Agent> getAll();
 	
-	public Agent findById(Integer id);
+	public Agent getById(Integer id);
 	
 	public Agent login(String email, String pwd);
+	
+	public Agent findByEmail(String email);
 }

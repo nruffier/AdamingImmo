@@ -16,4 +16,6 @@ public interface ClientService {
 	
 	public Client getById(Integer id);
 	
+	public Client findByEmail(String email);
+	
 }

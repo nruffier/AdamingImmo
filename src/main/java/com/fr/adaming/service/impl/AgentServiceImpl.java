@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.fr.adaming.entity.Agent;
@@ -34,7 +33,7 @@ public class AgentServiceImpl implements AgentService {
 	 */
 	@Override
 	public Agent create(Agent agent) {
-		if (repo.exists(Example.of(agent))) {
+		if (findByEmail(agent.getEmail()) != null) {
 			return null;
 		} else {
 			return repo.save(agent);
@@ -51,7 +50,7 @@ public class AgentServiceImpl implements AgentService {
 	 */
 	@Override
 	public Agent update(Agent agent) {
-		if (findById(agent.getId()) != null) {
+		if (findByEmail(agent.getEmail()) != null) {
 			return repo.save(agent);
 		} else {
 			return null;
@@ -83,7 +82,7 @@ public class AgentServiceImpl implements AgentService {
 	 *@return Agent with the given id if present in the DB - null if not
 	 */
 	@Override
-	public Agent findById(Integer id) {
+	public Agent getById(Integer id) {
 		try {
 			return repo.findById(id).get();
 		} catch (NoSuchElementException e) {
@@ -112,6 +111,11 @@ public class AgentServiceImpl implements AgentService {
 	@Override
 	public Agent login(String email, String pwd) {
 		return repo.findByEmailAndPwd(email, pwd);
+	}
+	
+	@Override
+	public Agent findByEmail(String email) {
+		return repo.findByEmail(email);
 	}
 
 }
