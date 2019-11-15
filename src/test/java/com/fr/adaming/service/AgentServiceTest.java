@@ -20,6 +20,10 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import com.fr.adaming.entity.Agent;
 import com.fr.adaming.service.impl.AgentServiceImpl;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @SpringBootTest
 public class AgentServiceTest {
 

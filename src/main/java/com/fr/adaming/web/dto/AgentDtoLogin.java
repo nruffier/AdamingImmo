@@ -9,6 +9,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class AgentDtoLogin {
 

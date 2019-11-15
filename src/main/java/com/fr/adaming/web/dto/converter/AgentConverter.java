@@ -4,6 +4,10 @@ import com.fr.adaming.entity.Agent;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 public class AgentConverter {
 
 	public static Agent AgentDtoRegisterToAgent(AgentDtoRegister agentDtoRegister) {

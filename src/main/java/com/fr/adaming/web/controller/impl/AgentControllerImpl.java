@@ -13,6 +13,10 @@ import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
 import com.fr.adaming.web.dto.converter.AgentConverter;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @RestController
 public class AgentControllerImpl implements AgentController{
 	@Autowired

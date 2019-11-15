@@ -16,6 +16,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
 public class AgentDtoUpdate {
 	
