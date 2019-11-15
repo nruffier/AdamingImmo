@@ -96,7 +96,7 @@ public class BienServiceImpl implements BienService {
 	 * @return Retourne la liste de biens
 	 */
 	@Override
-	public List<Bien> getAll(Bien bien) {
+	public List<Bien> getAll() {
 		// TODO Auto-generated method stub
 		return repo.findAll();
 	}

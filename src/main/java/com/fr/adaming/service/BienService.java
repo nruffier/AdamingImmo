@@ -14,7 +14,7 @@ public interface BienService {
 
 	public Bien findById(Long id);
 
-	public List<Bien> getAll(Bien bien);
+	public List<Bien> getAll();
 
 	public void sellBien(Long id);
 
