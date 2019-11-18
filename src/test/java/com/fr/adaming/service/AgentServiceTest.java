@@ -29,7 +29,7 @@ public class AgentServiceTest {
 
 	@Autowired
 	private AgentServiceImpl service;
-
+	
 	@Test
 	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)

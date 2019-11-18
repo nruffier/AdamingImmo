@@ -8,6 +8,8 @@ class AdmamingImmoApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+		System.out.println("deee");
 	}
 
 }
