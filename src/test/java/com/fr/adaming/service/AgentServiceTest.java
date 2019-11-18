@@ -31,13 +31,12 @@ public class AgentServiceTest {
 	private AgentServiceImpl service;
 
 	@Test
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void createValidAgent_shouldReturnAgentWithIdNotNull() {
 		Agent c = new Agent("email@gmail.com", "fullName1", "0123456789", "azertyuiop");
 
 		Agent returnedAgent = service.create(c);
-
 		assertNotNull(returnedAgent);
 		assertNotNull(returnedAgent.getId());
 		assertNotNull(returnedAgent.getEmail());
@@ -51,9 +50,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void createAgentWithExistingEmail_shouldReturnNull() {
 		Agent c = new Agent("email@gmail.com", "fullName1", "0123456789", "azertyuiop");
 
@@ -63,7 +62,7 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createAgentWithEmailNull_shouldThrowDataIntegrityViolationException() {
 		Agent c = new Agent("email@gmail.com", "fullName1", "0123456789", "azertyuiop");
 		c.setEmail(null);
@@ -77,7 +76,7 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createAgentWithFullNameNull_shouldThrowDataIntegrityViolationException() {
 		Agent c = new Agent("email@gmail.com", "fullName1", "0123456789", "azertyuiop");
 		c.setFullName(null);
@@ -91,7 +90,7 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createAgentWithFullPwd_shouldThrowDataIntegrityViolationException() {
 		Agent c = new Agent("email@gmail.com", "fullName1", "0123456789", "azertyuiop");
 		c.setPwd(null);
@@ -105,9 +104,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateValidAgent_shouldReturnAgentWithIdNotNull() {
 		Agent c = new Agent(1, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
 				LocalDate.of(0001, 01, 01));
@@ -126,9 +125,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void updateInvalidAgent_shouldReturnNull() {
-		Agent c = new Agent(1, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
+		Agent c = new Agent(456418, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
 				LocalDate.of(0001, 01, 01));
 		Agent returnedAgent = service.update(c);
 
@@ -145,9 +144,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateAgentwithEmailNull_shouldReturnNull() {
 		Agent c = new Agent(1, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
 				LocalDate.of(0001, 01, 01));
@@ -159,9 +158,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateAgentwithFullNameNull_shouldThrowDataIntegrityViolationException() {
 		Agent c = new Agent(1, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
 				LocalDate.of(0001, 01, 01));
@@ -176,9 +175,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateAgentwithPwdNull_shouldThrowDataIntegrityViolationException() {
 		Agent c = new Agent(1, "email@gmail.com", "NewfullName", "9876543210", "azertyuiop",
 				LocalDate.of(0001, 01, 01));
@@ -193,7 +192,7 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void deleteWithValidId_shouldReturnTrue() {
 		boolean returnedresult = service.delete(1);
@@ -209,9 +208,10 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = {
+			"DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void getByIdWithValidId_shouldReturnAgentNotNull() {
 		Agent returnedAgent = service.getById(1);
 		assertNotNull(returnedAgent);
@@ -230,9 +230,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void findByEmailWithValidEmail_shouldReturnAgentNotNull() {
 		Agent returnedAgent = service.findByEmail("email@gmail.com");
 		assertNotNull(returnedAgent);
@@ -251,9 +251,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void loginWithCorrectEmailAndPwd_shouldReturnAgentNotNull() {
 		Agent returnedAgent = service.login("email@gmail.com", "azertyuiop");
 		assertNotNull(returnedAgent);
@@ -265,9 +265,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void loginWithCorrectEmailAndFalsePwd_shouldReturnNull() {
 		Agent returnedAgent = service.login("email@gmail.com", "ezbfjkalfbizea");
 
@@ -275,9 +275,9 @@ public class AgentServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table agent",
+	@Sql(statements = { "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table agent", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void loginWithFalseEmailAndPwd_shouldReturnNull() {
 		Agent returnedAgent = service.login("fbzjeipq", "ezbfjkalfbizea");
 

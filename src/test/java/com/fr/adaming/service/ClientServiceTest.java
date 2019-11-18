@@ -30,8 +30,8 @@ public class ClientServiceTest {
 	private ClientServiceImpl service;
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void createValidClient_shouldReturnClientWithIdNotNull() {
 		Client c = new Client("email@gmail.com", "fullName1", "0123456789", Type.ACHETEUR);
 
@@ -50,9 +50,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void createClientWithExistingEmail_shouldReturnNull() {
 		Client c = new Client("email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 
@@ -62,7 +62,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createClientWithEmailNull_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client("email@gmail.com", "fullName1", "0123456789", Type.VENDEUR);
 		c.setEmail(null);
@@ -77,7 +77,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createClientWithFullNameNull_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client("email@gmail.com", "fullName1", "0123456789", Type.VENDEUR);
 		c.setFullName(null);
@@ -91,7 +91,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createClientWithTypeNull_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client("email@gmail.com", "fullName1", "0123456789", Type.VENDEUR);
 		c.setType(null);
@@ -105,7 +105,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void createClientWithInvalidType_shouldThrowIllegalArgumentException() {
 		Client c = new Client("email@gmail.com", "fullName1", "0123456789", Type.VENDEUR);
 
@@ -117,9 +117,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateValidClient_shouldReturnClientWithIdNotNull() {
 		Client c = new Client(1, "email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 
@@ -138,7 +138,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void updateInvalidClient_shouldReturnNull() {
 		Client c = new Client(1, "email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 
@@ -157,9 +157,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateClientwithEmailNull_shouldReturnNull() {
 		Client c = new Client(1, "email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 		c.setEmail(null);
@@ -170,9 +170,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateClientwithFullNameNull_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client(1, "email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 		c.setFullName(null);
@@ -186,9 +186,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateClientwithTypeNull_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client(1, "email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 		c.setType(null);
@@ -202,9 +202,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateClientWithInvalidType_shouldThrowIllegalArgumentException() {
 		Client c = new Client(1, "email@gmail.com", "fullName1", "0123456789", Type.VENDEUR);
 
@@ -216,9 +216,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void updateClientWithExistingEmailButNullEverywhereElse_shouldThrowDataIntegrityViolationException() {
 		Client c = new Client("email@gmail.com", "fullName2", "9876543210", Type.VENDEUR);
 		c.setFullName(null);
@@ -234,7 +234,7 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	public void deleteWithValidId_shouldReturnTrue() {
 		boolean returnedresult = service.delete(1);
@@ -250,9 +250,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void getByIdWithValidId_shouldReturnClientNotNull() {
 		Client returnedClient = service.getById(1);
 		System.out.println("DEBUG TEST VALIDE getById() " + returnedClient);
@@ -273,9 +273,9 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client",
+	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = "truncate table client", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void findByEmailWithValidEmail_shouldReturnClientNotNull() {
 		Client returnedClient = service.findByEmail("email@gmail.com");
 		assertNotNull(returnedClient);
@@ -294,10 +294,10 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	@Sql(statements = { "truncate table client", "truncate table agent",
+	@Sql(statements = { "DELETE FROM CLIENT", "DELETE FROM AGENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	@Sql(statements = {"truncate table client", "truncate table agent"}, executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	@Sql(statements = {"DELETE FROM CLIENT", "DELETE FROM AGENT"}, executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void addValidAgentToValidClient_shouldReturnTrue() {
 		assertTrue(service.addAgent(1, 1));
 	}
