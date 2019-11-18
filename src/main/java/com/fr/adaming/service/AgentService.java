@@ -22,5 +22,5 @@ public interface AgentService {
 
 	public Agent login(String email, String pwd);
 
-	public Agent findByEmail(String email);
+	public Agent getByEmail(String email);
 }

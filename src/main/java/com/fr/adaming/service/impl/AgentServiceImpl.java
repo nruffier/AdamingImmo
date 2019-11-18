@@ -3,6 +3,8 @@ package com.fr.adaming.service.impl;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ import com.fr.adaming.service.AgentService;
 @Service
 public class AgentServiceImpl implements AgentService {
 
+	private final static Logger logger = LogManager.getLogger(AgentServiceImpl.class);
+
 	@Autowired
 	private AgentRepository repo;
 
@@ -30,9 +34,11 @@ public class AgentServiceImpl implements AgentService {
 	 */
 	@Override
 	public Agent create(Agent agent) {
-		if (findByEmail(agent.getEmail()) != null) {
+		if (getByEmail(agent.getEmail()) != null) {
+			logger.error("Agent with email " + agent.getEmail() + " already exist, create failed");
 			return null;
 		} else {
+			logger.debug("Agent with email " + agent.getEmail() + " succefully added to the DB");
 			return repo.save(agent);
 		}
 	}
@@ -46,9 +52,11 @@ public class AgentServiceImpl implements AgentService {
 	 */
 	@Override
 	public Agent update(Agent agent) {
-		if (findByEmail(agent.getEmail()) != null) {
+		if (getByEmail(agent.getEmail()) != null) {
+			logger.debug("Agent with email " + agent.getEmail() + " succefully updated");
 			return repo.save(agent);
 		} else {
+			logger.error("Agent with email " + agent.getEmail() + "doen't exist, update failed");
 			return null;
 		}
 	}
@@ -63,9 +71,11 @@ public class AgentServiceImpl implements AgentService {
 	@Override
 	public boolean delete(Integer id) {
 		if (repo.existsById(id)) {
+			logger.debug("Agent with id : " + id + " succefully deleted");
 			repo.delete(repo.findById(id).get());
 			return true;
 		} else {
+			logger.error("Agent with id : " + id + "doen't exist, delete failed");
 			return false;
 		}
 	}
@@ -79,8 +89,12 @@ public class AgentServiceImpl implements AgentService {
 	@Override
 	public Agent getById(Integer id) {
 		try {
-			return repo.findById(id).get();
+			Agent agent = repo.findById(id).get();
+			logger.debug("GetById with id : " + id + " : " + agent);
+			return agent;
+
 		} catch (NoSuchElementException e) {
+			logger.error("Agent with id : " + id + " doesn't exist");
 			return null;
 		}
 	}
@@ -104,12 +118,27 @@ public class AgentServiceImpl implements AgentService {
 	 */
 	@Override
 	public Agent login(String email, String pwd) {
-		return repo.findByEmailAndPwd(email, pwd);
+		try {
+			Agent agent = repo.findByEmailAndPwd(email, pwd);
+			logger.debug("Login succes");
+			return agent;
+		} catch (NoSuchElementException e) {
+			logger.error("login fail");
+			return null;
+		}
 	}
 
 	@Override
-	public Agent findByEmail(String email) {
-		return repo.findByEmail(email);
+	public Agent getByEmail(String email) {
+		try {
+			Agent agent = repo.findByEmail(email);
+			logger.debug("GetByEmail with email : " + email + " : " + agent);
+			return agent;
+
+		} catch (NoSuchElementException e) {
+			logger.error("Agent with email : " + email + " doesn't exist");
+			return null;
+		}
 	}
 
 }

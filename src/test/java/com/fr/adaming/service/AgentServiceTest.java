@@ -234,7 +234,7 @@ public class AgentServiceTest {
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void findByEmailWithValidEmail_shouldReturnAgentNotNull() {
-		Agent returnedAgent = service.findByEmail("email@gmail.com");
+		Agent returnedAgent = service.getByEmail("email@gmail.com");
 		assertNotNull(returnedAgent);
 		assertSame(returnedAgent.getId(), 1);
 		assertEquals(returnedAgent.getEmail(), "email@gmail.com");
@@ -245,7 +245,7 @@ public class AgentServiceTest {
 
 	@Test
 	public void findByEmailWithInvalidEmail_shouldReturnNull() {
-		Agent returnedAgent = service.findByEmail("yfjvhqefsdx");
+		Agent returnedAgent = service.getByEmail("yfjvhqefsdx");
 
 		assertNull(returnedAgent);
 	}

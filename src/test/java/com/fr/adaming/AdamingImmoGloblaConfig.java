@@ -17,7 +17,6 @@ public class AdamingImmoGloblaConfig {
 			webServer = Server.createWebServer("-web", "-webAllowOthers", "-webPort", "8072");
 			webServer.start();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
