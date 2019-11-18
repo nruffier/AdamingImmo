@@ -1,0 +1,23 @@
+2019-11-18 20:45:25.627  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Starting ClientServiceTest on IN-LY-022 with PID 2632 (started by IN-LY-022 in C:\Users\IN-LY-022\WorkSpaceJSP\AdamingImmo)
+2019-11-18 20:45:25.627 DEBUG IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2019-11-18 20:45:25.627  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : No active profile set, falling back to default profiles: default
+2019-11-18 20:45:33.106  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Started ClientServiceTest in 7.94 seconds (JVM running for 11.659)
+2019-11-18 20:45:33.730 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 846354563 doesn't exist
+2019-11-18 20:45:33.808 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Client [type=VENDEUR, agent=null, toString()=com.fr.adaming.entity.Client@3fed0c04]
+2019-11-18 20:45:33.917 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-18 20:45:34.011 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email nulldoen't exist, update failed
+2019-11-18 20:45:34.027 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.comdoen't exist, update failed
+2019-11-18 20:45:34.058 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-18 20:45:34.073 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-18 20:45:34.105 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email null successfully added to the DB
+2019-11-18 20:45:34.136 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email nulldoen't exist, update failed
+2019-11-18 20:45:34.168 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 846354563doen't exist, delete failed
+2019-11-18 20:45:34.199 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-18 20:45:34.262 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-18 20:45:34.277 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted
+2019-11-18 20:45:34.324 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 successfully added to client with id 1
+2019-11-18 20:45:34.402 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-18 20:45:34.434 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-18 20:45:34.465 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-18 20:45:34.496 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-18 20:45:34.512 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
