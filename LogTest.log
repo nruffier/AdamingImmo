@@ -21,3 +21,170 @@
 2019-11-18 20:45:34.465 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
 2019-11-18 20:45:34.496 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
 2019-11-18 20:45:34.512 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 10:38:53.355 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 10:38:53.430 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 10:44:57.631 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 10:44:57.681 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 10:50:12.481 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 10:50:12.553 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:00:14.017 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:00:14.095 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:01:07.970 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:01:08.048 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:08:41.284 DEBUG IN-LY-022 --- [nio-8080-exec-1] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr successfully added to the DB
+2019-11-19 11:08:41.353 ERROR IN-LY-022 --- [nio-8080-exec-1] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:10:25.075 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:10:25.125 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:10:25.188 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:17:02.110 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:17:02.188 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:17:02.241 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:17:02.256 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:21:39.653 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:21:39.715 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:22:20.453 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:22:20.518 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:23:23.458 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:23:41.833 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:24:57.678 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:24:59.259 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:25:45.728 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:25:45.793 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:26:50.972 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:26:51.034 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:31:04.402 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:31:04.464 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:40:42.195 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:40:42.241 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:41:35.233 DEBUG IN-LY-022 --- [nio-8080-exec-2] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr successfully added to the DB
+2019-11-19 11:41:35.299 ERROR IN-LY-022 --- [nio-8080-exec-2] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:41:37.980 ERROR IN-LY-022 --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:41:50.029 ERROR IN-LY-022 --- [nio-8080-exec-6] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:43:41.528 DEBUG IN-LY-022 --- [nio-8080-exec-1] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr successfully added to the DB
+2019-11-19 11:43:41.584 ERROR IN-LY-022 --- [nio-8080-exec-1] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:44:01.814 ERROR IN-LY-022 --- [nio-8080-exec-3] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr already exist, create failed
+2019-11-19 11:44:23.298 DEBUG IN-LY-022 --- [nio-8080-exec-5] c.f.a.s.i.AgentServiceImpl               : Client with email emal@gmail.fr successfully added to the DB
+2019-11-19 11:44:23.309 ERROR IN-LY-022 --- [nio-8080-exec-5] c.f.a.s.i.AgentServiceImpl               : Client with email emal@gmail.fr already exist, create failed
+2019-11-19 11:50:50.911 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:50:50.978 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 11:50:51.150 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 11:50:51.150 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:01:08.841 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:01:08.887 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:01:08.981 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:01:08.981 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:01:09.012 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:01:09.022 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:01:09.038 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email eqfsdxc successfully added to the DB
+2019-11-19 12:01:09.038 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email eqfsdxc already exist, create failed
+2019-11-19 12:07:37.987 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:07:38.034 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:09:00.980 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:09:01.015 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:09:01.140 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:09:01.156 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:12:23.958 DEBUG IN-LY-022 --- [nio-8080-exec-7] c.f.a.s.i.AgentServiceImpl               : Client with email emailzqefsd@gmail.fr successfully added to the DB
+2019-11-19 12:12:23.965 ERROR IN-LY-022 --- [nio-8080-exec-7] c.f.a.s.i.AgentServiceImpl               : Client with email emailzqefsd@gmail.fr already exist, create failed
+2019-11-19 12:24:20.309 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:24:20.368 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:24:20.508 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:24:20.524 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:30:19.780 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:30:19.825 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:30:19.825 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:30:19.950 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:30:19.950 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:30:19.950 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr already exist, create failed
+2019-11-19 12:35:42.802 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:35:43.051 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:37:33.254 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:37:33.509 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.fr successfully added to the DB
+2019-11-19 12:38:05.431 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:38:05.675 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 12:40:26.626 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:40:26.959 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 12:41:23.243 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:41:23.426 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 12:41:23.559 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 12:44:04.117 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:44:04.287 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 12:44:04.350 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 12:44:04.553 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 12:46:11.164 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:46:11.377 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 12:46:11.440 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 12:46:11.596 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 12:47:40.148 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 12:47:40.329 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 12:47:40.392 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 12:47:40.501 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 13:02:05.090 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 13:02:05.277 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 13:02:05.402 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 13:02:05.543 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 14:12:12.196 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 14:12:12.466 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 14:12:12.591 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:12:12.716 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 14:26:22.635  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Starting ClientServiceTest on IN-LY-022 with PID 9096 (started by IN-LY-022 in C:\Users\IN-LY-022\WorkSpaceJSP\AdamingImmo)
+2019-11-19 14:26:22.650 DEBUG IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2019-11-19 14:26:22.650  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : No active profile set, falling back to default profiles: default
+2019-11-19 14:26:29.444  INFO IN-LY-022 --- [           main] c.f.a.s.ClientServiceTest                : Started ClientServiceTest in 7.214 seconds (JVM running for 9.796)
+2019-11-19 14:26:30.100 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 846354563 doesn't exist
+2019-11-19 14:26:30.178 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Client [type=VENDEUR, agent=null, toString()=com.fr.adaming.entity.Client@4babe06f]
+2019-11-19 14:26:30.256 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-19 14:26:30.334 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email null doen't exist, update failed
+2019-11-19 14:26:30.350 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 14:26:30.350 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 14:26:30.397 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:26:30.428 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email null successfully added to the DB
+2019-11-19 14:26:30.459 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email null doen't exist, update failed
+2019-11-19 14:26:30.482 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 846354563 doen't exist, delete failed
+2019-11-19 14:26:30.497 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:26:30.544 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-19 14:26:30.560 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted
+2019-11-19 14:26:30.622 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 successfully added to client with id 1
+2019-11-19 14:26:30.685 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 14:26:30.700 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:26:30.732 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully added to the DB
+2019-11-19 14:26:30.779 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 14:26:30.794 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:27:07.289 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 14:27:07.484 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 14:27:07.618 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:27:07.774 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 14:48:04.861 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 14:48:05.006 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 14:48:05.378 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 14:48:05.550 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 15:10:20.095 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted
+2019-11-19 15:15:37.177 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 643551 doen't exist, delete failed
+2019-11-19 15:26:16.442 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 15:28:55.772 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 15:28:55.936 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 15:28:56.092 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted
+2019-11-19 15:28:56.248 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 15:28:56.436 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 15:28:56.561 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 643551 doen't exist, delete failed
+2019-11-19 15:47:20.835 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 15:47:21.093 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 15:47:21.240 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted
+2019-11-19 15:47:21.459 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 15:47:21.646 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 15:47:21.834 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 643551 doen't exist, delete failed
+2019-11-19 17:09:47.365 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Client [type=VENDEUR, agent=null, toString()=com.fr.adaming.entity.Client@797ca322]
+2019-11-19 17:11:31.918 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 5312 doesn't exist
+2019-11-19 17:15:01.581 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 successfully added to client with id 1
+2019-11-19 17:19:36.324 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 17:20:34.397 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 17:20:53.875 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@email.fr successfully added to the DB
+2019-11-19 17:20:54.065 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com doen't exist, update failed
+2019-11-19 17:20:54.292 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com successfully updated
+2019-11-19 17:20:54.421 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 successfully added to client with id 1
+2019-11-19 17:20:54.628 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 643551 doen't exist, delete failed
+2019-11-19 17:20:54.691 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with email email@gmail.com already exist, create failed
+2019-11-19 17:20:54.928 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 17:20:54.971 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 5312 doesn't exist
+2019-11-19 17:20:55.022 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Client [type=VENDEUR, agent=null, toString()=com.fr.adaming.entity.Client@8e100e7]
+2019-11-19 17:20:55.141 ERROR IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id 1 and/or client with id 1 don't exist
+2019-11-19 17:20:55.168 DEBUG IN-LY-022 --- [           main] c.f.a.s.i.AgentServiceImpl               : Client with id : 1 successfully deleted

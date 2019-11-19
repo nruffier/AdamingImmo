@@ -24,10 +24,10 @@ import com.fr.adaming.web.dto.ClientDtoUpdate;
 public interface ClientController {
 
 	@PostMapping(path = "/create")
-	public String create(@Valid @RequestBody ClientDto dto);
+	public Client create(@Valid @RequestBody ClientDto dto);
 
 	@PutMapping(path = "/update")
-	public String update(@Valid @RequestBody ClientDtoUpdate dto);
+	public Client update(@Valid @RequestBody ClientDtoUpdate dto);
 
 	@DeleteMapping(path = "/{id}/delete")
 	public String delete(@PathVariable(name = "id") Integer id);
