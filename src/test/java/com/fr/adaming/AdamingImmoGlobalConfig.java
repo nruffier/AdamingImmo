@@ -8,7 +8,7 @@ import org.h2.tools.Server;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AdamingImmoGloblaConfig {
+public class AdamingImmoGlobalConfig {
 
 	@PostConstruct
 	public void init() {

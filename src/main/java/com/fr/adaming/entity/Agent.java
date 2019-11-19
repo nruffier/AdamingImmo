@@ -55,4 +55,11 @@ public class Agent extends User {
 				+ getEmail() + ", getFullName()=" + getFullName() + ", getTelephone()=" + getTelephone() + "]";
 	}
 
+	public Agent(Integer id, String email, String fullName, String telephone, String pwd) {
+		super(id, email, fullName, telephone);
+		this.pwd = pwd;
+	}
+
+	
+
 }

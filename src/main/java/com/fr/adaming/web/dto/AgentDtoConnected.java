@@ -19,22 +19,23 @@ import lombok.ToString;
  * @author Nicolas RUFFIER
  *
  */
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
-public class AgentDtoRegister {
-	
-	@NotBlank
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class AgentDtoConnected {
 	@NotNull
+	private Integer id;
+	@NotBlank
 	@Email
 	private String email;
 	@NotBlank
-	@NotNull
 	private String fullName;
 	@NotBlank
 	@Pattern(regexp = "[0-9]{10}")
 	private String telephone;
 	@Size(min = 8, max = 16)
-	@NotBlank
-	private String pwd;
 	@PastOrPresent
 	private LocalDate dateRectrutement;
 }

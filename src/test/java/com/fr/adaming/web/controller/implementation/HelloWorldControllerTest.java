@@ -18,7 +18,7 @@ import com.fr.adaming.enumeration.Type;
 import com.fr.adaming.web.dto.ClientDto;
 
 public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
-
+	//Ca c'est juste un exemple du mapper pour convertir enre Json et objet
 	@Test
 	public void testConvertJsonToJavaObject() throws JsonMappingException, JsonProcessingException {
 		String json = "{ \"email\" : \"emafijfdlfq@emdail.dfr\", \"fullName\" : \"fullnameegzrfsBUIbp\", \"telephone\" : \"012345\", \"type\" : \"VENDEUR\"} ";
@@ -37,7 +37,7 @@ public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 	}
 	
 	
-	
+	//Ca c'est les tests de la couche controller
 	@Test
 	public void sayHello_shouldReturnHelloWolrd() throws Exception {
 		String result = mvc.perform(get("/api/hello")

@@ -1,6 +1,7 @@
 package com.fr.adaming.web.dto.converter;
 
 import com.fr.adaming.entity.Agent;
+import com.fr.adaming.web.dto.AgentDtoConnected;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
 
@@ -45,6 +46,15 @@ public class AgentConverter {
 				agent.getFullName(),
 				agent.getTelephone(),
 				agent.getPwd(),
+				agent.getDateRectrutement());
+	}
+	
+	public static AgentDtoConnected agentToAgentDtoConnected(Agent agent) {
+		return new AgentDtoConnected(
+				agent.getId(),
+				agent.getEmail(),
+				agent.getFullName(),
+				agent.getTelephone(),
 				agent.getDateRectrutement());
 	}
 }
