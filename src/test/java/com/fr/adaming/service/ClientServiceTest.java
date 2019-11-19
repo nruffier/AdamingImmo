@@ -276,8 +276,8 @@ public class ClientServiceTest {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void findByEmailWithValidEmail_shouldReturnClientNotNull() {
-		Client returnedClient = service.findByEmail("email@gmail.com");
+	public void getByEmailWithValidEmail_shouldReturnClientNotNull() {
+		Client returnedClient = service.getByEmail("email@gmail.com");
 		assertNotNull(returnedClient);
 		assertSame(returnedClient.getId(), 1);
 		assertEquals(returnedClient.getEmail(), "email@gmail.com");
@@ -287,8 +287,8 @@ public class ClientServiceTest {
 	}
 
 	@Test
-	public void findByEmailWithInvalidEmail_shouldReturnNull() {
-		Client returnedClient = service.findByEmail("yfjvhqefsdx");
+	public void getByEmailWithInvalidEmail_shouldReturnNull() {
+		Client returnedClient = service.getByEmail("yfjvhqefsdx");
 
 		assertNull(returnedClient);
 	}
@@ -300,6 +300,22 @@ public class ClientServiceTest {
 	@Sql(statements = {"DELETE FROM CLIENT", "DELETE FROM AGENT"}, executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void addValidAgentToValidClient_shouldReturnTrue() {
 		assertTrue(service.addAgent(1, 1));
+	}
+	
+	@Test
+	@Sql(statements = { "DELETE FROM CLIENT", "DELETE FROM AGENT",
+			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void addValidAgentToInvalidClient_shouldReturnFalse() {
+		assertFalse(service.addAgent(1, 1));
+	}
+	
+	@Test
+	@Sql(statements = { "DELETE FROM CLIENT", "DELETE FROM AGENT",
+			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void addInvalidAgentToValidClient_shouldReturnTrue() {
+		assertFalse(service.addAgent(1, 1));
 	}
 
 }

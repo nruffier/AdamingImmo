@@ -23,20 +23,22 @@ public class ClientControllerImpl implements ClientController {
 	private ClientServiceImpl service;
 
 	@Override
-	public String create(ClientDto dto) {
-		if (service.create(ClientConverter.convertClientDtoToClient(dto)) != null) {
-			return "SUCCESS CREATE CLIENT";
+	public Client create(ClientDto dto) {
+		Client client = service.create(ClientConverter.convertClientDtoToClient(dto));
+		if (client != null) {
+			return client;
 		} else {
-			return "FAIL CREATE CLIENT";
+			return null;
 		}
 	}
 
 	@Override
-	public String update(ClientDtoUpdate dto) {
-		if (service.update(ClientConverter.convertClientDtoUpdateToClient(dto)) != null) {
-			return "SUCCESS UPDATE CLIENT";
+	public Client update(ClientDtoUpdate dto) {
+		Client client = service.update(ClientConverter.convertClientDtoUpdateToClient(dto));
+		if (client != null) {
+			return client;
 		} else {
-			return "FAIL UPDATE CLIENT";
+			return null;
 		}
 	}
 
@@ -62,9 +64,9 @@ public class ClientControllerImpl implements ClientController {
 	@Override
 	public String addAgent(Integer idC, Integer idA) {
 		if (service.addAgent(idC, idA)) {
-			return "addAgent SUCCES";
+			return "SUCCESS addAgent";
 		} else {
-			return "addAgent FAIL";
+			return "FAIL addAgent";
 		}
 	}
 
