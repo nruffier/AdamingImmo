@@ -26,6 +26,10 @@ import com.fr.adaming.web.dto.AgentDtoLogin;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 public class AgentControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
