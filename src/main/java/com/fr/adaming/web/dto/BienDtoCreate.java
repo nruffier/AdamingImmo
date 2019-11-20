@@ -1,6 +1,5 @@
 package com.fr.adaming.web.dto;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
@@ -16,10 +15,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class BienDtoCreate {
-	@NotBlank
+	@NotNull
 	@Positive
 	private Double prix;
 
-	@NotNull
 	private boolean vendu;
 }

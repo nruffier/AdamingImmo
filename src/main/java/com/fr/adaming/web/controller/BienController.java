@@ -24,13 +24,13 @@ import com.fr.adaming.web.dto.BienDtoCreate;
 public interface BienController {
 
 	@PostMapping(path = "/create")
-	public String create(@Valid @RequestBody BienDtoCreate bienDtoCreate);
+	public BienDtoCreate create(@Valid @RequestBody BienDtoCreate bienDtoCreate);
 
 	@PutMapping(path = "/update")
-	public String update(@Valid @RequestBody BienDto biendto);
+	public BienDto update(@Valid @RequestBody BienDto biendto);
 
 	@PutMapping(path = "/{id}/sell-id/")
-	public void sellBien(@PathVariable(name = "id") Long id);
+	public String sellBien(@PathVariable(name = "id") Long id);
 
 	@GetMapping(path = "/{id}/get-id/")
 	public Bien getById(@PathVariable(name = "id") Long id);

@@ -21,14 +21,13 @@ import lombok.ToString;
 @ToString
 public class BienDto {
 
-	@NotBlank
+	@NotNull
 	private Long id;
 
-	@NotBlank
+	@NotNull
 	@Positive
 	private Double prix;
 
-	@NotNull
 	private boolean vendu;
 
 }

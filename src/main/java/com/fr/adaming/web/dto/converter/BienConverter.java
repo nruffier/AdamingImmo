@@ -11,6 +11,11 @@ import com.fr.adaming.web.dto.BienDtoCreate;
 public class BienConverter {
 
 	public static Bien convertBienDtoToBien(BienDto dto) {
+		
+		if(dto == null) {
+			return null;
+		}
+		
 		Bien bien = new Bien();
 		bien.setId(dto.getId());
 		bien.setPrix(dto.getPrix());
@@ -19,6 +24,9 @@ public class BienConverter {
 	}
 
 	public static BienDto convertBienToBienDto(Bien bien) {
+		if(bien == null) {
+			return null;
+		}
 		BienDto dto = new BienDto();
 		dto.setId(bien.getId());
 		dto.setPrix(bien.getPrix());
@@ -28,6 +36,12 @@ public class BienConverter {
 	}
 
 	public static Bien convertBienDtoCreateToBien(BienDtoCreate dto) {
+		
+		if(dto == null) {
+			return null;
+		}
+		
+		
 		Bien bien = new Bien();
 		bien.setPrix(dto.getPrix());
 		bien.setVendu(dto.isVendu());
@@ -35,6 +49,12 @@ public class BienConverter {
 	}
 
 	public static BienDtoCreate convertBienToBienDtoCreate(Bien bien) {
+		
+		if(bien == null) {
+			return null;
+		}
+		
+		
 		BienDtoCreate dto = new BienDtoCreate();
 		dto.setPrix(bien.getPrix());
 		dto.setVendu(bien.isVendu());
