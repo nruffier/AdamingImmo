@@ -208,3 +208,41 @@
 2019-11-19 17:16:00.891 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullName1, getTelephone()=0123456789]
 2019-11-19 17:16:00.891 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com already exist, create failed
 2019-11-19 17:16:00.931 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:15:08.427 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullName1, getTelephone()=0123456789]
+2019-11-20 10:15:08.428 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com already exist, create failed
+2019-11-20 10:25:25.571 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1 doesn't exist
+2019-11-20 10:25:26.140 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullname, getTelephone()=0123456789]
+2019-11-20 10:25:26.140 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully updated
+2019-11-20 10:25:26.240 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullname, getTelephone()=0123456789]
+2019-11-20 10:25:26.284 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 10:25:26.284 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.comdoen't exist, update failed
+2019-11-20 10:25:26.301 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:25:26.330 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1 succefully deleted
+2019-11-20 10:25:26.419 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1doen't exist, delete failed
+2019-11-20 10:25:26.434 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email1@gmail.com : null
+2019-11-20 10:25:26.434 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email1@gmail.comdoen't exist, update failed
+2019-11-20 10:25:26.484 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:25:26.501 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 10:25:26.501 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB
+2019-11-20 10:25:26.543 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:25:26.573 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullName1, getTelephone()=0123456789]
+2019-11-20 10:25:26.574 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com already exist, create failed
+2019-11-20 10:25:26.622 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:26:37.723 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullname, getTelephone()=0123456789]
+2019-11-20 10:26:37.724 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully updated
+2019-11-20 10:26:37.832 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetById with id : 1 : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullname, getTelephone()=0123456789]
+2019-11-20 10:26:37.871 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 10:26:37.871 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.comdoen't exist, update failed
+2019-11-20 10:26:37.899 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:26:37.934 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1 succefully deleted
+2019-11-20 10:26:38.036 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1doen't exist, delete failed
+2019-11-20 10:26:38.048 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with id : 1 doesn't exist
+2019-11-20 10:26:38.062 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email1@gmail.com : null
+2019-11-20 10:26:38.062 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email1@gmail.comdoen't exist, update failed
+2019-11-20 10:26:38.105 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:26:38.119 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 10:26:38.119 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB
+2019-11-20 10:26:38.160 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 10:26:38.188 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullName1, getTelephone()=0123456789]
+2019-11-20 10:26:38.188 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com already exist, create failed
+2019-11-20 10:26:38.227 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
