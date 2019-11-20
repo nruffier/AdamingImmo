@@ -89,3 +89,7 @@
 2019-11-20 15:17:58.833 DEBUG ROG-G752VY --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : Agent with email email2@email.fr succefully added to the DB
 2019-11-20 15:22:10.102 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
 2019-11-20 15:22:10.102 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB
+2019-11-20 15:23:31.494 DEBUG ROG-G752VY --- [nio-8080-exec-3] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email3@email.fr : null
+2019-11-20 15:23:31.494 DEBUG ROG-G752VY --- [nio-8080-exec-3] c.f.a.s.i.AgentServiceImpl               : Agent with email email3@email.fr succefully added to the DB
+2019-11-20 15:24:07.280 DEBUG ROG-G752VY --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email456@email.fr : null
+2019-11-20 15:24:07.281 DEBUG ROG-G752VY --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : Agent with email email456@email.fr succefully added to the DB
