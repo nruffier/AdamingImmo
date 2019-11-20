@@ -22,7 +22,7 @@ import com.fr.adaming.web.dto.ClientDto;
  */
 public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 	//Ca c'est juste un exemple du mapper pour convertir enre Json et objet
-	@Test
+	//@Test
 	public void testConvertJsonToJavaObject() throws JsonMappingException, JsonProcessingException {
 		String json = "{ \"email\" : \"emafijfdlfq@emdail.dfr\", \"fullName\" : \"fullnameegzrfsBUIbp\", \"telephone\" : \"012345\", \"type\" : \"VENDEUR\"} ";
 		ClientDto dto = mapper.readValue(json, ClientDto.class);
@@ -31,7 +31,7 @@ public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 		assertEquals("fullnameegzrfsBUIbp", dto.getFullName());
 	}
 	
-	@Test
+	//@Test
 	public void testConvertJavaObjectToJson() throws JsonProcessingException {
 		ClientDto dto = new ClientDto("email", "fullname", "0123456789", Type.VENDEUR);
 		
@@ -41,7 +41,7 @@ public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 	
 	
 	//Ca c'est les tests de la couche controller
-	@Test
+	//@Test
 	public void sayHello_shouldReturnHelloWolrd() throws Exception {
 		String result = mvc.perform(get("/api/hello")
 			.contentType(MediaType.APPLICATION_JSON))
@@ -52,7 +52,7 @@ public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 			assertEquals("HelloWorld From Spring web", result);
 	}
 	
-	@Test
+	//@Test
 	public void createValidClient_ShouldReturnStatus200AndClientDtoNotNull() throws UnsupportedEncodingException, Exception {
 		String result = mvc.perform(post("/api/hello")
 				.contentType(MediaType.APPLICATION_JSON)
@@ -65,7 +65,7 @@ public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 	
 	
 	//Pareil mais avec mapper :
-	@Test
+	//@Test
 	public void MapperCreateValidClient_ShouldReturnStatus200AndClientDtoNotNull() throws UnsupportedEncodingException, Exception {
 		//preparer les inputs
 		ClientDto dto = new ClientDto("email@email.fr", "fullname", "0123456789", Type.VENDEUR);
