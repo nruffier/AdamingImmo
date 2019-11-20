@@ -22,7 +22,6 @@ import com.fr.adaming.web.dto.ClientDtoUpdate;
  *
  */
 @RequestMapping(path = "api/client")
-@CrossOrigin
 public interface ClientController {
 
 	@PostMapping(path = "/create")
