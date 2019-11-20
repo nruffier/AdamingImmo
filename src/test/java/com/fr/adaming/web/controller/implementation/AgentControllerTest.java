@@ -26,6 +26,10 @@ import com.fr.adaming.web.dto.AgentDtoLogin;
 import com.fr.adaming.web.dto.AgentDtoRegister;
 import com.fr.adaming.web.dto.AgentDtoUpdate;
 
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 public class AgentControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
@@ -267,9 +271,10 @@ public class AgentControllerTest extends AdmamingImmoApplicationTests {
 	}
 
 	@Test
-	public void getByIdWithInvalidId_shouldReturnStatut200AndAgentNotNull()
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+public void getByIdWithInvalidId_shouldReturnStatut400A()
 			throws UnsupportedEncodingException, Exception {
-		mvc.perform(get("/api/agent/1/get-id")).andDo(print()).andExpect(status().is(400)).andReturn().getResponse()
+		mvc.perform(get("/api/agent/400/get-id")).andDo(print()).andExpect(status().is(400)).andReturn().getResponse()
 				.getContentAsString();
 	}
 

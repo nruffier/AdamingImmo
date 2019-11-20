@@ -16,7 +16,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fr.adaming.AdmamingImmoApplicationTests;
 import com.fr.adaming.enumeration.Type;
 import com.fr.adaming.web.dto.ClientDto;
-
+/**
+ * @author Nicolas RUFFIER
+ *
+ */
 public class HelloWorldControllerTest extends AdmamingImmoApplicationTests {
 	//Ca c'est juste un exemple du mapper pour convertir enre Json et objet
 	@Test

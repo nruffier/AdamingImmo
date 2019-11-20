@@ -6,7 +6,10 @@ import javax.annotation.PostConstruct;
 
 import org.h2.tools.Server;
 import org.springframework.context.annotation.Configuration;
-
+/**
+ * @author Nicolas RUFFIER & Mehdi :)
+ *
+ */
 @Configuration
 public class AdamingImmoGlobalConfig {
 
