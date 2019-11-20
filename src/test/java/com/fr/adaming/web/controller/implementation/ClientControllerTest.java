@@ -35,7 +35,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void CreateValidClient_ShouldReturnStatus200AndClientNotNull()
+	public void createValidClient_ShouldReturnStatus200AndClientNotNull()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", "fullname", "0123456789", Type.VENDEUR);
@@ -59,7 +59,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void CreateClientWithExistingEmail_ShouldReturnStatus200AndNull()
+	public void createClientWithExistingEmail_ShouldReturnStatus200AndNull()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@gmail.com", "fullname", "0123456789", Type.VENDEUR);
@@ -75,7 +75,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithInvalidEmail_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithInvalidEmail_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("eqfsdxc", "fullname", "0123456789", Type.VENDEUR);
 
@@ -86,7 +86,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithInvalidSizeTelephoneNumber_ShouldReturnStatus400()
+	public void createClientWithInvalidSizeTelephoneNumber_ShouldReturnStatus400()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", "fullname", "012345", Type.VENDEUR);
@@ -98,7 +98,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithInvalidTelephoneContent_ShouldReturnStatus400()
+	public void createClientWithInvalidTelephoneContent_ShouldReturnStatus400()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", "fullname", "azertyuiop", Type.VENDEUR);
@@ -107,10 +107,22 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 				.content(mapper.writeValueAsString(dto))).andExpect(status().is(400));
 
 	}
+	
+	@Test
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	public void createClientWithNullTelephone_ShouldReturnStatus400()
+			throws UnsupportedEncodingException, Exception {
+
+		ClientDto dto = new ClientDto("email@email.fr", "fullname", null, Type.VENDEUR);
+
+		mvc.perform(post("/api/client/create").contentType(MediaType.APPLICATION_JSON)
+				.content(mapper.writeValueAsString(dto))).andExpect(status().is(400));
+
+	}
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithBlankFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithBlankFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", "     ", "azertyuiop", Type.VENDEUR);
 
@@ -121,7 +133,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithNullFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithNullFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", null, "azertyuiop", Type.VENDEUR);
 
@@ -132,7 +144,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithBlankType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithBlankType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		mvc.perform(post("/api/client/create").contentType(MediaType.APPLICATION_JSON).content(
 				"{\"email\":\"email@gmail.fr\",\"fullName\":\"fullname\",\"telephone\":\"0123456789\",\"type\":\"    \"}"))
@@ -142,7 +154,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithInvalidType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithInvalidType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		mvc.perform(post("/api/client/create").contentType(MediaType.APPLICATION_JSON).content(
 				"{\"email\":\"email@gmail.fr\",\"fullName\":\"fullname\",\"telephone\":\"0123456789\",\"type\":\"INVALIDTYPE\"}"))
@@ -152,7 +164,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-	public void CreateClientWithNullType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void createClientWithNullType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDto dto = new ClientDto("email@email.fr", "fullname", "azertyuiop", null);
 
@@ -165,7 +177,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateValidClient_ShouldReturnStatus200AndClientNotNull()
+	public void updateValidClient_ShouldReturnStatus200AndClientNotNull()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", "9876543210", Type.ACHETEUR);
@@ -178,17 +190,17 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 		Client returnedClient = mapper.readValue(result, Client.class);
 
 		assertNotNull(returnedClient);
-		assertEquals(returnedClient.getEmail(), dto.getEmail());
-		assertEquals(returnedClient.getFullName(), dto.getFullName());
-		assertEquals(returnedClient.getTelephone(), dto.getTelephone());
-		assertEquals(returnedClient.getType(), dto.getType());
+		assertEquals(dto.getEmail(), returnedClient.getEmail());
+		assertEquals(dto.getFullName(), returnedClient.getFullName());
+		assertEquals(dto.getTelephone(), returnedClient.getTelephone());
+		assertEquals(dto.getType(), returnedClient.getType());
 
 	}
 
 	@Test
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateInvalidClient_ShouldReturnStatus200AndClientNull()
+	public void updateInvalidClient_ShouldReturnStatus200AndClientNull()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", "9876543210", Type.ACHETEUR);
@@ -206,7 +218,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithInvalidEmail_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithInvalidEmail_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "qzefsd", "fullname", "9876543210", Type.ACHETEUR);
 
@@ -219,7 +231,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithInvalidSizeTelephoneNumber_ShouldReturnStatus400()
+	public void updateClientWithInvalidSizeTelephoneNumber_ShouldReturnStatus400()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", "543210", Type.ACHETEUR);
@@ -233,10 +245,24 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithInvalidTelephoneContent_ShouldReturnStatus400()
+	public void updateClientWithInvalidTelephoneContent_ShouldReturnStatus400()
 			throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", "azertyuiop", Type.ACHETEUR);
+
+		mvc.perform(put("/api/client/update").contentType(MediaType.APPLICATION_JSON)
+				.content(mapper.writeValueAsString(dto))).andExpect(status().is(400));
+
+	}
+	
+	@Test
+	@Sql(statements = { "DELETE FROM CLIENT",
+			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
+	public void updateClientWithNullTelephone_ShouldReturnStatus400()
+			throws UnsupportedEncodingException, Exception {
+
+		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", null, Type.ACHETEUR);
 
 		mvc.perform(put("/api/client/update").contentType(MediaType.APPLICATION_JSON)
 				.content(mapper.writeValueAsString(dto))).andExpect(status().is(400));
@@ -247,7 +273,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithNullId_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithNullId_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(null, "email@gmail.com", "fullname", "0123456789", Type.ACHETEUR);
 
@@ -260,7 +286,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithBlankFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithBlankFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "    ", "0123456789", Type.ACHETEUR);
 
@@ -273,7 +299,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithNullFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithNullFullname_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", null, "0123456789", Type.ACHETEUR);
 
@@ -286,7 +312,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithBlankType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithBlankType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		mvc.perform(put("/api/client/update").contentType(MediaType.APPLICATION_JSON).content(
 				"{\"id\":\"1\",\"email\":\"email@gmail.fr\",\"fullName\":\"fullname\",\"telephone\":\"0123456789\",\"type\":\"    \"}"))
@@ -298,7 +324,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithInvalidType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithInvalidType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		mvc.perform(put("/api/client/update").contentType(MediaType.APPLICATION_JSON).content(
 				"{\"id\":\"1\",\"email\":\"email@gmail.fr\",\"fullName\":\"fullname\",\"telephone\":\"0123456789\",\"type\":\"INVALIDTYPE\"}"))
@@ -310,7 +336,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Sql(statements = { "DELETE FROM CLIENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
-	public void UpdateClientWithNullType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
+	public void updateClientWithNullType_ShouldReturnStatus400() throws UnsupportedEncodingException, Exception {
 
 		ClientDtoUpdate dto = new ClientDtoUpdate(1, "email@gmail.com", "fullname", "0123456789", null);
 
@@ -429,6 +455,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Test
 	@Sql(statements = { "DELETE FROM CLIENT", "DELETE FROM AGENT",
 			"insert into agent (id, email, full_name, telephone, pwd) values(1,'email@gmail.com','fullName1','0123456789', 'azertyuiop')" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM AGENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void addValidAgentToInvalidClient_shouldReturnStatus200AndFailMessage()
 			throws UnsupportedEncodingException, Exception {
 		String result = mvc.perform(get("/api/client/1/add-agent/1").contentType(MediaType.APPLICATION_JSON))
@@ -440,6 +467,7 @@ public class ClientControllerTest extends AdmamingImmoApplicationTests {
 	@Test
 	@Sql(statements = { "DELETE FROM CLIENT", "DELETE FROM AGENT",
 			"insert into client (id, email, full_name, telephone, type) values(1,'email@gmail.com','fullName1','0123456789', 1)" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+	@Sql(statements = "DELETE FROM CLIENT", executionPhase = ExecutionPhase.AFTER_TEST_METHOD)
 	public void addInvalidAgentToValidClient_shouldReturnStatus200AndFailMessage()
 			throws UnsupportedEncodingException, Exception {
 		String result = mvc.perform(get("/api/client/1/add-agent/1").contentType(MediaType.APPLICATION_JSON))
