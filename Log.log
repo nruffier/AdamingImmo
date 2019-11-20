@@ -1,0 +1,4 @@
+2019-11-20 14:56:25.274  INFO ROG-G752VY --- [           main] c.f.a.AdmamingImmoApplication            : Starting AdmamingImmoApplication on ROG-G752VY with PID 17232 (C:\Users\BloodStyx\eclipse\WorkspaceSpring\AdmamingImmo\target\classes started by BloodStyx in C:\Users\BloodStyx\eclipse\WorkspaceSpring\AdmamingImmo)
+2019-11-20 14:56:25.283 DEBUG ROG-G752VY --- [           main] c.f.a.AdmamingImmoApplication            : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2019-11-20 14:56:25.284  INFO ROG-G752VY --- [           main] c.f.a.AdmamingImmoApplication            : No active profile set, falling back to default profiles: default
+2019-11-20 14:56:30.178  INFO ROG-G752VY --- [           main] c.f.a.AdmamingImmoApplication            : Started AdmamingImmoApplication in 5.223 seconds (JVM running for 10.42)

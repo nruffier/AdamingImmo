@@ -81,3 +81,11 @@
 2019-11-20 10:32:23.162 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : Agent [pwd=azertyuiop, dateRectrutement=null, getId()=1, getEmail()=email@gmail.com, getFullName()=fullName1, getTelephone()=0123456789]
 2019-11-20 10:32:23.162 ERROR ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com already exist, create failed
 2019-11-20 10:32:23.200 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Login succes
+2019-11-20 15:13:47.693 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 15:13:47.693 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB
+2019-11-20 15:15:56.264 DEBUG ROG-G752VY --- [nio-8080-exec-2] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 15:15:56.265 DEBUG ROG-G752VY --- [nio-8080-exec-2] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB
+2019-11-20 15:17:58.833 DEBUG ROG-G752VY --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email2@email.fr : null
+2019-11-20 15:17:58.833 DEBUG ROG-G752VY --- [nio-8080-exec-4] c.f.a.s.i.AgentServiceImpl               : Agent with email email2@email.fr succefully added to the DB
+2019-11-20 15:22:10.102 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : GetByEmail with email : email@gmail.com : null
+2019-11-20 15:22:10.102 DEBUG ROG-G752VY --- [           main] c.f.a.s.i.AgentServiceImpl               : Agent with email email@gmail.com succefully added to the DB

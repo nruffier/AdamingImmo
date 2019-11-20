@@ -11,6 +11,7 @@ import javax.validation.ValidatorFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fr.adaming.entity.Agent;
@@ -27,6 +28,7 @@ import com.fr.adaming.web.dto.converter.AgentConverter;
  *
  */
 @RestController
+@CrossOrigin
 public class AgentControllerImpl implements AgentController {
 	@Autowired
 	private AgentService service;
